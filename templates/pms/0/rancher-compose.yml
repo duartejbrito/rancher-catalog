@@ -4,19 +4,9 @@
   description: "Plex Media Server"
   uuid: pms-1
   questions:
-    - variable: networkMode
-      description: "Network Mode"
-      label: "Network Mode"
-      type: "enum"
-      options:
-        - host
-        - bridge
-        - mcvlan
-      required: true
-      default: "host"
-      
+    #VOLUMES
     - variable: volumeConfig
-      description: "Volume for /config"
+      description: "The path where you wish Plex Media Server to store its configuration data. This database can grow to be quite large depending on the size of your media collection. This is usually a few GB but for large libraries or libraries where index files are generated, this can easily hit the 100s of GBs. If you have an existing database directory see the section below on the directory setup. Note: the underlying filesystem needs to support file locking. This is known to not be default enabled on remote filesystems like NFS, SMB, and many many others. The 9PFS filesystem used by FreeNAS Corral is known to work but the vast majority will result in database corruption. Use a network share at your own risk."
       label: "Volume Config"
       type: "string"
       required: true
@@ -39,6 +29,18 @@
       type: "string"
       required: true
       default: "/host/data/dockers/PlexMediaServer/transcode"
+    #NETWORKING
+    - variable: networkMode
+      description: "Network Mode"
+      label: "Network Mode"
+      type: "enum"
+      options:
+        - host
+        - bridge
+        - macvlan
+      required: true
+      default: "host"
+
     - variable: envAdvertiseIp
       description: "Env Var ADVERTISE_IP"
       label: "ADVERTISE_IP"
