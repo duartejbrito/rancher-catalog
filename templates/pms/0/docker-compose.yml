@@ -10,9 +10,9 @@ services:
     network_mode: host
     environment:
       VERSION: latest 
-      PGID: 1001
-      PUID: 1001
-      TZ: Europe/London
-      ADVERTISE_IP: 'http://192.168.1.50:32400/'
-      ALLOWED_NETWORKS: '192.168.1.0/255.255.255.0'
+      PGID: ${envPGID}
+      PUID: ${envPUID}
+      TZ: ${envTimezone}
+      ADVERTISE_IP: ${envAdvertiseIp}
+      ALLOWED_NETWORKS: ${envAllowedNetworks}
       HOME: '/config'

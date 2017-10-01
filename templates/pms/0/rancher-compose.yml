@@ -28,6 +28,36 @@
       type: "string"
       required: true
       default: "/host/data/dockers/PlexMediaServer/transcode"
+    - variable: envAdvertiseIp
+      description: "Env Var ADVERTISE_IP"
+      label: "ADVERTISE_IP"
+      type: "string"
+      required: true
+      default: "http://192.168.1.50:32400/"
+    - variable: envAllowedNetworks
+      description: "Env Var ALLOWED_NETWORKS"
+      label: "ALLOWED_NETWORKS"
+      type: "string"
+      required: true
+      default: "192.168.1.0/255.255.255.0"
+    - variable: envTimezone
+      description: "Env Var TZ"
+      label: "TZ"
+      type: "string"
+      required: true
+      default: "Europe/London"
+    - variable: envPGID
+      description: "Env Var PGID"
+      label: "PGID"
+      type: "int"
+      required: true
+      default: "1001"
+    - variable: envPUID
+      description: "Env Var PUID"
+      label: "PUID"
+      type: "int"
+      required: true
+      default: "1001"
 
 plex-media-server:
   scale: 1
