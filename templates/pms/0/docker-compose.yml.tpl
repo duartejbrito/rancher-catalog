@@ -34,16 +34,10 @@ services:
 {{- end}}
 {{- if eq .Values.networkMode "macvlan"}}
     networks:
-      external:
+      vlan:
         ipv4_address: ${ipv4Address}
 networks:
-  external:
-    driver: macvlan
-    driver_opts:
-      parent: eth0
-    ipam:
-      config:
-        - subnet: 192.168.1.51/24
-          gateway: 192.168.1.254
-          ip_range: 192.168.1.51/24 # IP from this pool are assigned automatically
+  vlan:
+    external:
+      name: external
 {{- end}}
