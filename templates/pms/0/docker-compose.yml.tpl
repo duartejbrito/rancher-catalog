@@ -34,7 +34,7 @@ services:
 {{- end}}
 {{- if eq .Values.networkMode "macvlan"}}
     networks:
-      vlan:
+      default:
         ipv4_address: ${ipv4Address}
 networks:
   vlan:
