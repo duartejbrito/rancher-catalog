@@ -81,20 +81,29 @@
       required: true
       default: "host"
 
-    #host
+    - variable: hostname
+      description: "Sets the hostname inside the docker container. For example -h PlexServer will set the servername to PlexServer. Not needed in Host Networking."
+      label: "Hostname"
+      type: "string"
+      required: false
+      default: ""
+
     #bridge
     - variable: envAdvertiseIp
       description: "This variable defines the additional IPs on which the server may be be found. For example: http://10.1.1.23:32400. This adds to the list where the server advertises that it can be found. This is only needed in Bridge Networking."
       label: "ADVERTISE_IP"
       type: "string"
-      required: true
-      default: "192.168.1.50"
+      required: false
+      default: ""
+
     #macvlan
-
-    
-    
-    
-
+    - variable: ipv4Address
+      description: "Only for type macvlan network"
+      label: "IPV4 Address"
+      type: "string"
+      required: false
+      default: ""
+      
 plex-media-server:
   scale: 1
   start_on_create: true

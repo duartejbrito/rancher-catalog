@@ -11,10 +11,16 @@ services:
 {{- if eq .Values.networkMode "host"}}
     network_mode: host
 {{- end}}
+{{- if ne .Values.networkMode "host"}}
+{{- if ne .Values.hostname ""}}
+    hostname: ${hostname}
+{{- end}}
+{{- end}}
     environment:
       PGID: ${envPGID}
       PUID: ${envPUID}
       TZ: ${envTimezone}
+      HOME: '/config'
 {{- if ne .Values.envPlexClaim ""}}
       PLEX_CLAIM: ${envPlexClaim}
 {{- end}}
@@ -26,4 +32,11 @@ services:
       ADVERTISE_IP: 'http://${envAdvertiseIp}:32400'
 {{- end}}
 {{- end}}
-      HOME: '/config'
+{{- if eq .Values.networkMode "macvlan"}}
+    networks:
+      physical:
+        ipv4_address: ${ipv4Address}
+networks:
+  physical:
+    external: true
+{{- end}}
