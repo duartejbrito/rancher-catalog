@@ -3,6 +3,13 @@
   version: "v1"
   description: "Plex Media Server"
   uuid: pms-1
+  questions:
+    - variable: volumeConfig
+      description: "Volume for /config"
+      label: "Volume Config"
+      type: "string"
+      required: true
+      default: "/host/data/dockers/PlexMediaServer/config"
 
 plex-media-server:
   scale: 1

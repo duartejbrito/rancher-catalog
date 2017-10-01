@@ -1,7 +1,7 @@
 plex-media-server:
   image: linuxserver/plex
   volumes:
-  - /host/data/dockers/PlexMediaServer/config:/config:rw
+  - ${volumeConfig}:/config:rw
   - /host/data/dockers/PlexMediaServer/data:/data:rw
   - /host/data/media:/media:rw
   - /host/data/dockers/PlexMediaServer/transcode:/transcode:rw
