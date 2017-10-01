@@ -55,6 +55,13 @@
       required: true
       default: "1001"
 
+    - variable: envPlexClaim
+      description: "The claim token for the server to obtain a real server token. If not provided, server is will not be automatically logged in. If server is already logged in, this parameter is ignored. You can obtain a claim token to login your server to your plex account by visiting https://www.plex.tv/claim"
+      label: "PLEX_CLAIM"
+      type: "string"
+      required: false
+      default: ""
+
     - variable: envAllowedNetworks
       description: "IP/netmask entries which allow access to the server without requiring authorization. We recommend you set this only if you do not sign in your server. For example 192.168.1.0/24,172.16.0.0/16 will allow access to the entire 192.168.1.x range and the 172.16.x.x range. Note: If you are using Bridge networking, then localhost will appear to plex as coming from the docker networking gateway which is often 172.16.0.1."
       label: "ALLOWED_NETWORKS"
@@ -76,14 +83,15 @@
 
     #host
     #bridge
-    #macvlan
-
     - variable: envAdvertiseIp
-      description: "Env Var ADVERTISE_IP"
+      description: "This variable defines the additional IPs on which the server may be be found. For example: http://10.1.1.23:32400. This adds to the list where the server advertises that it can be found. This is only needed in Bridge Networking."
       label: "ADVERTISE_IP"
       type: "string"
       required: true
-      default: "http://192.168.1.50:32400/"
+      default: "192.168.1.50"
+    #macvlan
+
+    
     
     
 

@@ -15,7 +15,15 @@ services:
       PGID: ${envPGID}
       PUID: ${envPUID}
       TZ: ${envTimezone}
+{{- if ne .Values.envPlexClaim ""}}
+      PLEX_CLAIM: ${envPlexClaim}
+{{- end}}
 {{- if ne .Values.envAllowedNetworks ""}}
       ALLOWED_NETWORKS: ${envAllowedNetworks}
+{{- end}}
+{{- if eq .Values.networkMode "bridge"}}
+{{- if ne .Values.envAdvertiseIp ""}}
+      ADVERTISE_IP: 'http://${envAdvertiseIp}:32400'
+{{- end}}
 {{- end}}
       HOME: '/config'
