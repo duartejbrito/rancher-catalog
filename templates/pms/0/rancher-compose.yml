@@ -4,6 +4,17 @@
   description: "Plex Media Server"
   uuid: pms-1
   questions:
+    - variable: networkMode
+      description: "Network Mode"
+      label: "Network Mode"
+      type: "enum"
+      options:
+        - host
+        - bridge
+        - mcvlan
+      required: true
+      default: "host"
+      
     - variable: volumeConfig
       description: "Volume for /config"
       label: "Volume Config"
