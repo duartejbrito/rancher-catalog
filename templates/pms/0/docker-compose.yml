@@ -5,7 +5,6 @@ plex-media-server:
   - ${volumeData}:/data:rw
   - ${volumeMedia}:/media:rw
   - ${volumeTranscode}:/transcode:rw
-  network_mode: host
   environment:
     VERSION: latest 
     PGID: 1001
