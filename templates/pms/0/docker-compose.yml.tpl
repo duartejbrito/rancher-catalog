@@ -8,12 +8,14 @@ services:
     - ${volumeData}:/data:rw
     - ${volumeMedia}:/media:rw
     - ${volumeTranscode}:/transcode:rw
+{{- if eq .Values.networkMode "host"}}
     network_mode: host
+{{- end}}
     environment:
-      VERSION: latest 
       PGID: ${envPGID}
       PUID: ${envPUID}
       TZ: ${envTimezone}
-      ADVERTISE_IP: ${envAdvertiseIp}
+{{- if ne .Values.envAllowedNetworks ""}}
       ALLOWED_NETWORKS: ${envAllowedNetworks}
+{{- end}}
       HOME: '/config'
