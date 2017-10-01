@@ -1,4 +1,3 @@
-# rancher-catalog
-Personal Rancher Catalog
+# Duarte Brito Rancher Catalog
 
-Under construction
+This catalog provides templates created by me, and they are not maintained or supported by Rancher Labs.

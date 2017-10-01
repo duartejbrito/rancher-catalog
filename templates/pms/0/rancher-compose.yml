@@ -1,0 +1,9 @@
+.catalog:
+  name: "Plex Media Server"
+  version: "v1"
+  description: "Plex Media Server"
+  uuid: pms-1
+
+plex-media-server:
+  scale: 1
+  start_on_create: true

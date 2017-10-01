@@ -1,0 +1,6 @@
+name: Plex Media Server
+description: |
+  Plex Media Server
+version: v1
+category: Media Server
+maintainer: Duarte Brito <sytertzp@gmail.com>
