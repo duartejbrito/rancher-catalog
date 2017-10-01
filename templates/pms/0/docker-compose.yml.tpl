@@ -34,6 +34,6 @@ services:
 {{- end}}
 {{- if eq .Values.networkMode "macvlan"}}
     networks:
-      ${macvlanNetwork}:
+      external:
         ipv4_address: ${ipv4Address}
 {{- end}}
