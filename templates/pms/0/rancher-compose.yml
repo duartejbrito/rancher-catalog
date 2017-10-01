@@ -10,6 +10,24 @@
       type: "string"
       required: true
       default: "/host/data/dockers/PlexMediaServer/config"
+    - variable: volumeData
+      description: "Volume for /data"
+      label: "Volume Data"
+      type: "string"
+      required: true
+      default: "/host/data/dockers/PlexMediaServer/data"
+    - variable: volumeMedia
+      description: "Volume for /media"
+      label: "Volume Media"
+      type: "string"
+      required: true
+      default: "/host/data/media"
+    - variable: volumeTranscode
+      description: "Volume for /transcode"
+      label: "Volume Transcode"
+      type: "string"
+      required: true
+      default: "/host/data/dockers/PlexMediaServer/transcode"
 
 plex-media-server:
   scale: 1

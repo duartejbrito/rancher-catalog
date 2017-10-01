@@ -2,9 +2,9 @@ plex-media-server:
   image: linuxserver/plex
   volumes:
   - ${volumeConfig}:/config:rw
-  - /host/data/dockers/PlexMediaServer/data:/data:rw
-  - /host/data/media:/media:rw
-  - /host/data/dockers/PlexMediaServer/transcode:/transcode:rw
+  - ${volumeData}:/data:rw
+  - ${volumeMedia}:/media:rw
+  - ${volumeTranscode}:/transcode:rw
   network_mode: host
   environment:
     VERSION: latest 
