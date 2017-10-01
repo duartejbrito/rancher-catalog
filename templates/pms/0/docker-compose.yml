@@ -1,7 +1,8 @@
 version: '2'
 services:
   plex-media-server:
-    image: linuxserver/plex
+    image: plexinc/pms-docker
+    restart: unless-stopped
     volumes:
     - ${volumeConfig}:/config:rw
     - ${volumeData}:/data:rw

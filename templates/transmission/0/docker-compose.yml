@@ -1,0 +1,5 @@
+version: '2'
+services:
+  transmission-client:
+    image: linuxserver/transmission
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+.catalog:
+  name: "Transmission"
+  version: "v1"
+  description: "Transmission"
+  uuid: pms-1
+
+transmission-client:
+  scale: 1
+  start_on_create: true
