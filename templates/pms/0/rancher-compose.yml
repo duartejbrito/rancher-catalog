@@ -97,6 +97,13 @@
       default: ""
 
     #macvlan
+    - variable: macvlanNetwork
+      description: "macvlan Network"
+      label: "macvlan Network"
+      type: "string"
+      required: false
+      default: ""
+
     - variable: ipv4Address
       description: "Only for type macvlan network"
       label: "IPV4 Address"

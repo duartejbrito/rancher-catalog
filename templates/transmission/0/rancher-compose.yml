@@ -2,7 +2,7 @@
   name: "Transmission"
   version: "v1"
   description: "Transmission"
-  uuid: pms-1
+  uuid: transmission-1
 
 transmission-client:
   scale: 1
