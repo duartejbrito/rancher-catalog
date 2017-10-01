@@ -77,7 +77,7 @@
       options:
         - host
         - bridge
-        - macvlan
+        #- macvlan
       required: true
       default: "host"
 
@@ -97,12 +97,12 @@
       default: ""
 
     #macvlan
-    - variable: ipv4Address
-      description: "Only for type macvlan network"
-      label: "IPV4 Address"
-      type: "string"
-      required: false
-      default: ""
+    #- variable: ipv4Address
+    #  description: "Only for type macvlan network"
+    #  label: "IPV4 Address"
+    #  type: "string"
+    #  required: false
+    #  default: ""
       
 plex-media-server:
   scale: 1
