@@ -5,6 +5,10 @@ services:
     restart: unless-stopped
     volumes:
     - ${volumeConfig}:/config:rw
-    - ${volumeData}:/data:rw
-    - ${volumeMedia}:/media:rw
-    - ${volumeTranscode}:/transcode:rw
+    - ${volumeDownloads}:/downloads:rw
+    - ${volumeMedia}:/shared:rw
+    - ${volumeWatch}:/watch:rw
+    environment:
+      PGID: ${envPGID}
+      PUID: ${envPUID}
+      TZ: ${envTimezone}

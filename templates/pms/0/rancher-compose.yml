@@ -46,14 +46,14 @@
       label: "PLEX_GID"
       type: "int"
       required: true
-      default: "1001"
+      default: 1001
 
     - variable: envPUID
       description: "The user id of the plex user created inside the container."
       label: "PLEX_UID"
       type: "int"
       required: true
-      default: "1001"
+      default: 1001
 
     - variable: envPlexClaim
       description: "The claim token for the server to obtain a real server token. If not provided, server is will not be automatically logged in. If server is already logged in, this parameter is ignored. You can obtain a claim token to login your server to your plex account by visiting https://www.plex.tv/claim"

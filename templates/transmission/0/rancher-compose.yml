@@ -3,6 +3,57 @@
   version: "v1"
   description: "Transmission"
   uuid: transmission-1
+  questions:
+    #VOLUMES
+    - variable: volumeConfig
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/data/dockers/Transmission/config"
+
+    - variable: volumeWatch
+      description: ""
+      label: "Path for Watch"
+      type: "string"
+      required: true
+      default: "/host/data/dockers/Transmission/watch"
+
+    - variable: volumeDownloads
+      description: ""
+      label: "Path for Downloads"
+      type: "string"
+      required: true
+      default: "/host/data/dockers/Transmission/downloads"
+
+    - variable: volumeMedia
+      description: "Adicional media path"
+      label: "Path for Media"
+      type: "string"
+      required: true
+      default: "/host/data/media"
+
+      #SHARED
+    - variable: envTimezone
+      description: "Set the timezone inside the container. For example: Europe/London. The complete list can be found here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
+      label: "TZ"
+      type: "string"
+      required: true
+      default: "Europe/London"
+
+    - variable: envPGID
+      description: "The group id of the transmission group created inside the container."
+      label: "PGID"
+      type: "int"
+      required: true
+      default: 1001
+
+    - variable: envPUID
+      description: "The user id of the transmission user created inside the container."
+      label: "PUID"
+      type: "int"
+      required: true
+      default: 1001
 
 transmission-client:
   scale: 1

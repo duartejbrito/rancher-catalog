@@ -17,8 +17,8 @@ services:
 {{- end}}
 {{- end}}
     environment:
-      PGID: ${envPGID}
-      PUID: ${envPUID}
+      PLEX_GID: ${envPGID}
+      PLEX_UID: ${envPUID}
       TZ: ${envTimezone}
       HOME: '/config'
 {{- if ne .Values.envPlexClaim ""}}
