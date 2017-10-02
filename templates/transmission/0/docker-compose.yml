@@ -8,7 +8,10 @@ services:
     - ${volumeDownloads}:/downloads:rw
     - ${volumeMedia}:/shared:rw
     - ${volumeWatch}:/watch:rw
-    network_mode: host
+    #network_mode: host
+    networks:
+      external:
+        ipv4_address: 192.168.1.51
     environment:
       PGID: ${envPGID}
       PUID: ${envPUID}
