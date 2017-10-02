@@ -8,7 +8,7 @@ services:
     - ${volumeDownloads}:/downloads:rw
     - ${volumeMedia}:/shared:rw
     - ${volumeWatch}:/watch:rw
-    network_mode: external
+    network_mode: macvlan
     #networks:
     #  external:
     #    ipv4_address: 192.168.1.51
