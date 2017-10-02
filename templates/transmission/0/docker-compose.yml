@@ -8,10 +8,12 @@ services:
     - ${volumeDownloads}:/downloads:rw
     - ${volumeMedia}:/shared:rw
     - ${volumeWatch}:/watch:rw
-    network_mode: macvlan
-    #networks:
-    #  external:
-    #    ipv4_address: 192.168.1.51
+    network_mode: none
+    labels:
+      io.rancher.container.network: true
+    networks:
+      external:
+        ipv4_address: 192.168.1.51
     environment:
       PGID: ${envPGID}
       PUID: ${envPUID}
