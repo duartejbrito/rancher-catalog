@@ -8,6 +8,7 @@ services:
     - ${volumeDownloads}:/downloads:rw
     - ${volumeMedia}:/shared:rw
     - ${volumeWatch}:/watch:rw
+    network_mode: host
     environment:
       PGID: ${envPGID}
       PUID: ${envPUID}
