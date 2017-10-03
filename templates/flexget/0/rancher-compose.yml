@@ -1,0 +1,24 @@
+.catalog:
+  name: "Flexget"
+  version: "v1"
+  description: "Flexget"
+  uuid: flexget-1
+  questions:
+    #VOLUMES
+    - variable: volumeFlexget
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/data/dockers/Flexget/flexget"
+
+    - variable: volumeMedia
+      description: "Adicional media path"
+      label: "Path for Media"
+      type: "string"
+      required: true
+      default: "/host/data/media"
+
+flexget-client:
+  scale: 1
+  start_on_create: true

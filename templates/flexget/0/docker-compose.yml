@@ -1,0 +1,9 @@
+version: '2'
+services:
+  flexget-client:
+    image: syter/flexget
+    restart: unless-stopped
+    volumes:
+    - ${volumeFlexget}:/flexget:rw
+    - ${volumeMedia}:/media:rw
+    network_mode: host
