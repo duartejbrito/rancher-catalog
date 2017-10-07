@@ -1,0 +1,6 @@
+name: nginx
+description: |
+  nginx
+version: v1
+category: Web Server
+maintainer: Duarte Brito <sytertzp@gmail.com>
