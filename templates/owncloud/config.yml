@@ -1,0 +1,6 @@
+name: owncloud
+description: |
+  owncloud
+version: v1
+category: Repository
+maintainer: Duarte Brito <sytertzp@gmail.com>

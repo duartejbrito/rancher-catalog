@@ -1,0 +1,17 @@
+version: '2'
+services:
+  owncloud:
+    image: owncloud
+    restart: unless-stopped
+    volumes:
+      - ${volumeOwncloud}:/mnt/data:rw
+    ports:
+      - "80:80"
+    links:
+      - db
+
+  db:
+    image: mariadb
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=password

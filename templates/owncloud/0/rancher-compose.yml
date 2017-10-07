@@ -1,0 +1,18 @@
+.catalog:
+  name: "Owncloud"
+  version: "v1"
+  description: "Owncloud"
+  uuid: owncloud-1
+  minimum_rancher_version: v0.51.0
+  questions:
+    #VOLUMES
+    - variable: volumeOwncloud
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/data/dockers/Owncloud"
+
+owncloud:
+  scale: 1
+  start_on_create: true
