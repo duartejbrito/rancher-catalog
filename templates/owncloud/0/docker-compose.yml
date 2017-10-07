@@ -4,7 +4,8 @@ services:
     image: owncloud
     restart: unless-stopped
     volumes:
-      - ${volumeOwncloud}:/mnt/data:rw
+      - ${volumeOwncloudData}:/mnt/data:rw
+      - ${volumeOwncloudConfig}:/var/www/html:rw
     ports:
       - "80:80"
     links:

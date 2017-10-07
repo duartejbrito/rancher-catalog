@@ -6,12 +6,19 @@
   minimum_rancher_version: v0.51.0
   questions:
     #VOLUMES
-    - variable: volumeOwncloud
+    - variable: volumeOwncloudData
+      description: ""
+      label: "Path for Data"
+      type: "string"
+      required: true
+      default: "/host/data/dockers/Owncloud/data"
+
+    - variable: volumeOwncloudConfig
       description: ""
       label: "Path for Config"
       type: "string"
       required: true
-      default: "/host/data/dockers/Owncloud"
+      default: "/host/data/dockers/Owncloud/config"
 
 owncloud:
   scale: 1
