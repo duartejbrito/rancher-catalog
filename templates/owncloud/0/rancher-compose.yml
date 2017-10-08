@@ -20,6 +20,12 @@
       required: true
       default: "/host/data/dockers/Owncloud/config"
 
+    - variable: mariadbPassword
+      description: ""
+      label: "mariadb password"
+      type: "string"
+      required: true
+
 owncloud:
   scale: 1
   start_on_create: true
