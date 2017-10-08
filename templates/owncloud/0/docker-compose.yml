@@ -7,7 +7,7 @@ services:
       - ${volumeOwncloudData}:/mnt/data:rw
       - ${volumeOwncloudConfig}:/var/www/html:rw
     ports:
-      - "80:80"
+      - 5444:80
     links:
       - db
 
