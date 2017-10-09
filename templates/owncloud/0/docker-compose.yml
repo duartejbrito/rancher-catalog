@@ -1,7 +1,7 @@
 version: '2'
 services:
   owncloud:
-    image: owncloud
+    image: owncloud/9
     restart: unless-stopped
     volumes:
       - ${volumeOwncloudData}:/mnt/data:rw
