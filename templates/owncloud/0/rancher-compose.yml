@@ -25,6 +25,7 @@
       label: "mariadb password"
       type: "string"
       required: true
+      default: "owncloud"
 
 owncloud:
   scale: 1
