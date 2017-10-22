@@ -1,0 +1,9 @@
+.catalog:
+  name: "wordpress"
+  version: "v1"
+  description: "wordpress"
+  uuid: wordpress-1
+
+wordpress:
+  scale: 1
+  start_on_create: true
