@@ -3,7 +3,7 @@ services:
   wordpress:
     image: wordpress:latest # https://hub.docker.com/_/wordpress/
     ports:
-      - 80:80 # change ip if required
+      - 8888:80 # change ip if required
     volumes:
       - /host/mnt/data/dockers/WP/blixmix/config/php.conf.uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - /host/mnt/data/dockers/WP/blixmix/wp-app:/var/www/html # Full wordpress project
