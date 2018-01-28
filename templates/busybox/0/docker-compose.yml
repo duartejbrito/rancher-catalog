@@ -1,6 +1,6 @@
 version: '2'
 services:
-  alpine-so:
-    image: alpine
+  busybox-so:
+    image: busybox
     restart: unless-stopped
     network_mode: host
