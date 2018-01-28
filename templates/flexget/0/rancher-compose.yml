@@ -10,14 +10,14 @@
       label: "Path for Config"
       type: "string"
       required: true
-      default: "/host/data/dockers/Flexget/flexget"
+      default: "/host/dockers/Flexget/flexget"
 
     - variable: volumeMedia
       description: "Adicional media path"
       label: "Path for Media"
       type: "string"
       required: true
-      default: "/host/data/media"
+      default: "/host/media"
 
 flexget-client:
   scale: 1

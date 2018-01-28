@@ -10,28 +10,28 @@
       label: "Path for Config"
       type: "string"
       required: true
-      default: "/host/tank/dockers/Transmission/config"
+      default: "/host/dockers/Transmission/config"
 
     - variable: volumeWatch
       description: ""
       label: "Path for Watch"
       type: "string"
       required: true
-      default: "/host/tank/dockers/Transmission/watch"
+      default: "/host/dockers/Transmission/watch"
 
     - variable: volumeDownloads
       description: ""
       label: "Path for Downloads"
       type: "string"
       required: true
-      default: "/host/tank/dockers/Transmission/downloads"
+      default: "/host/dockers/Transmission/downloads"
 
     - variable: volumeMedia
       description: "Adicional media path"
       label: "Path for Media"
       type: "string"
       required: true
-      default: "/host/tank/media"
+      default: "/host/media"
 
       #SHARED
     - variable: envTimezone
