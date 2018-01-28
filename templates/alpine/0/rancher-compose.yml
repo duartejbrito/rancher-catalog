@@ -1,0 +1,9 @@
+.catalog:
+  name: "Alpine"
+  version: "v1"
+  description: "Alpine"
+  uuid: alpine-1
+
+alpine-so:
+  scale: 1
+  start_on_create: true

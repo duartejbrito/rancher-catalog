@@ -1,0 +1,6 @@
+version: '2'
+services:
+  alpine-so:
+    image: alpine
+    restart: unless-stopped
+    network_mode: host
