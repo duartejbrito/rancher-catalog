@@ -1,9 +1,0 @@
-.catalog:
-  name: "Busybox"
-  version: "v1"
-  description: "Busybox"
-  uuid: busybox-1
-
-busybox-so:
-  scale: 1
-  start_on_create: true

@@ -1,6 +1,6 @@
-name: Busybox
+name: Alpine
 description: |
-  Busybox
+  Alpine
 version: v1
 category: SO
 maintainer: Duarte Brito <sytertzp@gmail.com>

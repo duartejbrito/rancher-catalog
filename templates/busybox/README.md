@@ -1,3 +1,0 @@
-# Busybox
-
-Busybox

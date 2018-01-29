@@ -1,6 +1,6 @@
 version: '2'
 services:
-  busybox-so:
+  alpine-so:
     image: lsiobase/alpine
     restart: unless-stopped
     network_mode: host
