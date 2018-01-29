@@ -3,4 +3,5 @@ services:
   alpine-so:
     image: lsiobase/alpine
     restart: unless-stopped
-    net: external
+    networks:
+      - external
