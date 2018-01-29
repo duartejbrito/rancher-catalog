@@ -3,6 +3,8 @@ services:
   alpine-so:
     image: lsiobase/alpine
     restart: unless-stopped
+    networks:
+      - default
 networks:
   default:
     external:
