@@ -2,7 +2,5 @@ version: '2'
 services:
   ytsproxy:
     image: syter/ytsproxy
-    ports:
-      - 8000:80
     restart: unless-stopped
     network_mode: host
