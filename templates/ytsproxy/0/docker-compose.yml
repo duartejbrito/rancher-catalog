@@ -1,0 +1,6 @@
+version: '2'
+services:
+  ytsproxy:
+    image: syter/ytsproxy
+    restart: unless-stopped
+    network_mode: host

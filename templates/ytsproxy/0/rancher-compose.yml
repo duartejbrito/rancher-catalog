@@ -1,0 +1,9 @@
+.catalog:
+  name: "YtsProxy"
+  version: "v1"
+  description: "YtsProxy"
+  uuid: ytsproxy-1
+
+ytsproxy:
+  scale: 1
+  start_on_create: true
