@@ -1,0 +1,9 @@
+.catalog:
+  name: "Ark"
+  version: "v1"
+  description: "Ark"
+  uuid: ark-1
+
+ark-server:
+  scale: 1
+  start_on_create: true

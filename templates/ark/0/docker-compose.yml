@@ -1,0 +1,13 @@
+version: '2'
+services:
+  ark-server:
+    image: turzam/ark
+    restart: unless-stopped
+    environment:
+      SESSIONNAME: "PCatchersArkServer"
+      ADMINPASSWORD: "adminpassword"
+      AUTOUPDATE: 120
+      AUTOBACKUP: 60
+      WARNMINUTE: 30
+    volumes:
+    - ${volumeConfig}:/ark:rw
