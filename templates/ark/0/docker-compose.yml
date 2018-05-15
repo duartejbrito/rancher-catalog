@@ -10,4 +10,4 @@ services:
       AUTOBACKUP: 60
       WARNMINUTE: 30
     volumes:
-    - ${volumeConfig}:/ark:rw
+    - /host/dockers/Ark:/ark:rw
