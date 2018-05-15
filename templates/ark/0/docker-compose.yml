@@ -3,6 +3,12 @@ services:
   ark-server:
     image: turzam/ark
     restart: unless-stopped
+    ports:
+      - "7778:7778"
+      - "7778:7778/udp"
+      - "27015:27015"
+      - "27015:27015/udp"
+      - "32330:32330"
     environment:
       SESSIONNAME: "PCatchersArkServer"
       ADMINPASSWORD: "adminpassword"
