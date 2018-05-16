@@ -4,10 +4,19 @@ services:
     image: turzam/ark
     restart: unless-stopped
     environment:
-      SESSIONNAME: "PCatchersArkServer"
-      ADMINPASSWORD: "adminpassword"
+      SESSIONNAME: ${SESSIONNAME}
+      SERVERMAP: ${SERVERMAP}
+      SERVERPASSWORD: ${SERVERPASSWORD}
+      ADMINPASSWORD: ${ADMINPASSWORD}
+      SERVERPORT: ${SERVERPORT}
+      STEAMPORT: ${STEAMPORT}
+      BACKUPONSTART: ${BACKUPONSTART}
+      UPDATEPONSTART: ${UPDATEPONSTART}
+      BACKUPONSTOP: ${BACKUPONSTOP}
+      WARNONSTOP: ${WARNONSTOP}
+      TZ: ${TZ}
       AUTOUPDATE: 120
       AUTOBACKUP: 60
       WARNMINUTE: 30
     volumes:
-    - /host/dockers/Ark:/ark:rw
+    - ${volumeArk}:/ark:rw

@@ -3,6 +3,92 @@
   version: "v1"
   description: "Ark"
   uuid: ark-1
+  questions:
+    #environment
+    - variable: SESSIONNAME
+      description: "Name of your ark server"
+      label: "SESSIONNAME"
+      type: "string"
+      required: true
+      default: "Ark Docker"
+
+    - variable: SERVERMAP
+      description: "Map of your ark server"
+      label: "SERVERMAP"
+      type: "string"
+      required: true
+      default: "TheIsland"
+
+    - variable: SERVERPASSWORD
+      description: "Password of your ark server"
+      label: "SERVERPASSWORD"
+      type: "string"
+      required: false
+      default: ""
+
+    - variable: ADMINPASSWORD
+      description: "Admin password of your ark server"
+      label: "ADMINPASSWORD"
+      type: "string"
+      required: true
+      default: "adminpassword"
+
+    - variable: SERVERPORT
+      description: "Ark server port"
+      label: "SERVERPORT"
+      type: "int"
+      required: true
+      default: 27015
+
+    - variable: STEAMPORT
+      description: "Steam server port"
+      label: "STEAMPORT"
+      type: "int"
+      required: true
+      default: 7778
+
+    - variable: BACKUPONSTART
+      description: "Backup the server when the container is started."
+      label: "BACKUPONSTART"
+      type: "int"
+      required: true
+      default: 1
+
+    - variable: UPDATEPONSTART
+      description: "Update the server when the container is started."
+      label: "UPDATEPONSTART"
+      type: "int"
+      required: true
+      default: 1
+
+    - variable: BACKUPONSTOP
+      description: "Backup the server when the container is stopped."
+      label: "BACKUPONSTOP"
+      type: "int"
+      required: true
+      default: 0
+
+    - variable: WARNONSTOP
+      description: "Warn the players before the container is stopped."
+      label: "WARNONSTOP"
+      type: "int"
+      required: true
+      default: 0
+
+    - variable: TZ
+      description: "Time Zone : Set the container timezone (for crontab)."
+      label: "TZ"
+      type: "string"
+      required: true
+      default: "Europe/London"
+
+    #Volumes
+    - variable: volumeArk
+      description: "Working directory"
+      label: "Volume for Ark Server"
+      type: "string"
+      required: true
+      default: "/host/dockers/Ark"
 
 ark-server:
   scale: 1
