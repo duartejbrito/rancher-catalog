@@ -6,10 +6,10 @@ services:
     ports:
       - "7777:7777"
       - "7777:7777/udp"
-      - "7778:7778"
-      - "7778:7778/udp"
-      - "27015:27015"
-      - "27015:27015/udp"
+      - "${SERVERPORT}:7778"
+      - "${SERVERPORT}:7778/udp"
+      - "${STEAMPORT}:27015"
+      - "${STEAMPORT}:27015/udp"
       - "32330:32330"
     environment:
       SESSIONNAME: ${SESSIONNAME}
