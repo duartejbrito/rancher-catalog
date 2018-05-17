@@ -10,6 +10,8 @@ services:
       - "${SERVERPORT}:7778/udp"
       - "${STEAMPORT}:27015"
       - "${STEAMPORT}:27015/udp"
+      - "27021:27021"
+      - "27021:27021/udp"
       - "32330:32330"
     environment:
       SESSIONNAME: ${SESSIONNAME}
