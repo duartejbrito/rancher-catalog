@@ -1,0 +1,9 @@
+version: '2'
+services:
+  homeassistant:
+    image: homeassistant/home-assistant
+    restart: unless-stopped
+    volumes:
+    - ${volumeConfig}:/config:rw
+    - /etc/localtime:/etc/localtime:ro
+    network_mode: host

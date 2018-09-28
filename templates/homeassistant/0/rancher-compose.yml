@@ -1,0 +1,17 @@
+.catalog:
+  name: "Home Assistant"
+  version: "v1"
+  description: "Home Assistant"
+  uuid: homeassistant-1
+  questions:
+    #VOLUMES
+    - variable: volumeConfig
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/HomeAssistant/config"
+
+homeassistant-client:
+  scale: 1
+  start_on_create: true
