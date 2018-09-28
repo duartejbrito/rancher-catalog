@@ -5,5 +5,6 @@ services:
     restart: unless-stopped
     volumes:
     - ${volumeConfig}:/config:rw
-    - /etc/localtime:/etc/localtime:ro
+    environment:
+    - TZ=Europe/Lisbon
     network_mode: host
