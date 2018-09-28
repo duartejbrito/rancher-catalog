@@ -12,6 +12,6 @@
       required: true
       default: "/host/dockers/HomeAssistant/config"
 
-homeassistant-client:
+homeassistant:
   scale: 1
   start_on_create: true
