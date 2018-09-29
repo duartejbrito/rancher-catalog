@@ -10,7 +10,7 @@
       label: "Path for Config"
       type: "string"
       required: true
-      default: "/host/dockers/Mosquitto/config/mosquitto.conf"
+      default: "/host/dockers/Mosquitto/config"
     - variable: volumeData
       description: ""
       label: "Path for Data"
