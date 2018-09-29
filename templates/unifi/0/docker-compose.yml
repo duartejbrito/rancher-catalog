@@ -1,0 +1,18 @@
+version: '2'
+services:
+  unifi-controller:
+    image: jacobalberty/unifi-docker
+    restart: unless-stopped
+    volumes:
+    - ${volumeConfig}:/unifi:rw
+   ports:
+     - '3478:3478/udp' #STUN service
+     - '10001:10001/udp' #UBNT Discovery
+     - '6789:6789/tcp' #Speed Test (unifi5 only)
+     - '8081:8080/tcp' #Device command/control
+     - '8880:8880/tcp' #HTTP portal
+     - '8444:8443/tcp' #Web interface + API
+     - '8843:8843/tcp' #HTTPS portal
+    environment:
+    - TZ=Europe/Lisbon
+    network_mode: host
