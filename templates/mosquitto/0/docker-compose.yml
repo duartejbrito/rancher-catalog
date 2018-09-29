@@ -4,7 +4,9 @@ services:
     image: eclipse-mosquitto
     restart: unless-stopped
     volumes:
-    - ${volumeConfig}:/mosquitto:rw
+    - ${volumeConfig}:/mosquitto/config/mosquitto.conf:rw
+    - ${volumeData}:/mosquitto/data:rw
+    - ${volumeLog}:/mosquitto/log:rw
     ports:
     - '9001:9001'
     - '1883:1883'

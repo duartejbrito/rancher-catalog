@@ -10,7 +10,19 @@
       label: "Path for Config"
       type: "string"
       required: true
-      default: "/host/dockers/Mosquitto/config"
+      default: "/host/dockers/Mosquitto/config/mosquitto.conf"
+    - variable: volumeData
+      description: ""
+      label: "Path for Data"
+      type: "string"
+      required: true
+      default: "/host/dockers/Mosquitto/data"
+    - variable: volumeLog
+      description: ""
+      label: "Path for Log"
+      type: "string"
+      required: true
+      default: "/host/dockers/Mosquitto/log"
 
 mosquitto:
   scale: 1
