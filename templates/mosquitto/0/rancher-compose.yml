@@ -1,0 +1,17 @@
+.catalog:
+  name: "Mosquitto"
+  version: "v1"
+  description: "Mosquitto"
+  uuid: mosquitto-1
+  questions:
+    #VOLUMES
+    - variable: volumeConfig
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/Mosquitto/config"
+
+mosquitto:
+  scale: 1
+  start_on_create: true

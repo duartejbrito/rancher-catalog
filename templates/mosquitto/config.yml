@@ -1,0 +1,6 @@
+name: Mosquitto
+description: |
+  Mosquitto
+version: v1
+category: Home Automation
+maintainer: Duarte Brito <sytertzp@gmail.com>

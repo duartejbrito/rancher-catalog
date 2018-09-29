@@ -1,0 +1,13 @@
+version: '2'
+services:
+  mosquitto:
+    image: mosquitto
+    restart: unless-stopped
+    volumes:
+    - ${volumeConfig}:/mosquitto:rw
+    ports:
+    - '9001:9001'
+    - '1883:1883'
+    environment:
+    - TZ=Europe/Lisbon
+    network_mode: host
