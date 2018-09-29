@@ -1,7 +1,7 @@
 version: '2'
 services:
   unifi-controller:
-    image: jacobalberty/unifi-docker
+    image: jacobalberty/unifi
     restart: unless-stopped
     volumes:
     - ${volumeConfig}:/unifi:rw
