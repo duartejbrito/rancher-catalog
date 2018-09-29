@@ -1,7 +1,7 @@
 version: '2'
 services:
   mosquitto:
-    image: mosquitto
+    image: docker pull eclipse-mosquitto
     restart: unless-stopped
     volumes:
     - ${volumeConfig}:/mosquitto:rw
