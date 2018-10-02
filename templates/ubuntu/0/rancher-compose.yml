@@ -1,0 +1,9 @@
+.catalog:
+  name: "Ubuntu"
+  version: "v1"
+  description: "Ubuntu"
+  uuid: ubuntu-1
+
+ubuntu:
+  scale: 1
+  start_on_create: true
