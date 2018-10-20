@@ -21,6 +21,8 @@ services:
     links:
       - nginx
     command: "-notify-sighup nginx -watch -wait 5s:30s /etc/docker-gen/templates/nginx.tmpl /etc/nginx/conf.d/default.conf"
+    labels:
+      io.rancher.sidekicks: nginx
   nginx-letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion
     environment:
@@ -31,3 +33,5 @@ services:
     volumes:
       - ${volumeCerts}:/etc/nginx/certs:rw
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      io.rancher.sidekicks: nginx
