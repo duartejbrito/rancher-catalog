@@ -10,21 +10,21 @@
       label: "Path for Html"
       type: "string"
       required: true
-      default: "/host/data/dockers/Nginx/html"
+      default: "/host/dockers/Nginx/html"
 
     - variable: volumeCustomConf
       description: ""
       label: "Path for Custom Conf"
       type: "string"
       required: true
-      default: "/host/data/dockers/Nginx/custom.conf"
+      default: "/host/dockers/Nginx/custom.conf"
     
     - variable: volumeDefaultConf
       description: ""
       label: "Path for Default Conf"
       type: "string"
       required: true
-      default: "/host/data/dockers/Nginx/default.conf"
+      default: "/host/dockers/Nginx/default.conf"
 
 nginx:
   scale: 1
