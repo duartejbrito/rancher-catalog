@@ -1,0 +1,6 @@
+name: Hassio Configurator
+description: |
+  Hassio Configurator
+version: v1
+category: Home Automation
+maintainer: Duarte Brito <sytertzp@gmail.com>

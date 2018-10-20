@@ -1,0 +1,23 @@
+.catalog:
+  name: "Hassio Configurator"
+  version: "v1"
+  description: "Hassio Configurator"
+  uuid: hassioconfigurator-1
+  questions:
+    #VOLUMES
+    - variable: volumeConfig
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/HassConfigurator/config"
+    - variable: volumeHassioConfig
+      description: ""
+      label: "Path for Home Assistant Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/HomeAssistant/config"
+
+hassioconfigurator:
+  scale: 1
+  start_on_create: true
