@@ -6,6 +6,7 @@ services:
       VIRTUAL_HOST: ${virtualHost}
       LETSENCRYPT_HOST: ${letsEncryptHost}
       LETSENCRYPT_EMAIL: ${letsEncryptEmail}
+      DEFAULT_HOST: ${defaultHost}
     restart: unless-stopped
     volumes:
       - ${volumeConfd}:/etc/nginx/conf.d:rw
