@@ -40,6 +40,27 @@
       required: true
       default: "/host/dockers/NginxProxy/nginx.tmpl"
 
+    - variable: virtualHost
+      description: ""
+      label: "Virtual Host Value"
+      type: "string"
+      required: true
+      default: "duartebrito.pw,www.duartebrito.pw,flexget.duartebrito.pw,hassio.duartebrito.pw,hassio-config.duartebrito.pw,mosquitto.duartebrito.pw,nas.duartebrito.pw,plex.duartebrito.pw,rancher.duartebrito.pw,transmission.duartebrito.pw,yts.duartebrito.pw"
+
+    - variable: letsEncryptHost
+      description: ""
+      label: "LetEncrypt Host Value"
+      type: "string"
+      required: true
+      default: "duartebrito.pw,www.duartebrito.pw,flexget.duartebrito.pw,hassio.duartebrito.pw,hassio-config.duartebrito.pw,mosquitto.duartebrito.pw,nas.duartebrito.pw,plex.duartebrito.pw,rancher.duartebrito.pw,transmission.duartebrito.pw,yts.duartebrito.pw"
+
+    - variable: letsEncryptEmail
+      description: ""
+      label: "LetEncrypt Email Value"
+      type: "string"
+      required: true
+      default: "sytertzp@gmail.com"
+
 nginx-proxy:
   scale: 1
   start_on_create: true
