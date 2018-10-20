@@ -1,7 +1,7 @@
 version: '2'
 services:
   hassioconfigurator:
-    image: syter/hassio-configurator
+    image: marthoc/hass-configurator
     restart: unless-stopped
     volumes:
     - ${volumeConfig}:/config:rw
