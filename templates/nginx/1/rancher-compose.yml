@@ -1,8 +1,8 @@
 .catalog:
-  name: "nginx"
-  version: "v1"
+  name: "nginx-proxy"
+  version: "v2"
   description: "nginx"
-  uuid: nginx-1
+  uuid: nginx-proxy-1
   questions:
     #VOLUMES
     - variable: volumeHtml
@@ -40,7 +40,7 @@
       required: true
       default: "/host/dockers/NginxProxy/nginx.tmpl"
 
-nginx:
+nginx-proxy:
   scale: 1
   start_on_create: true
 nginx-gen:
