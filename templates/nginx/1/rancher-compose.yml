@@ -44,7 +44,7 @@
       description: ""
       label: "Virtual Host Value"
       type: "string"
-      required: true
+      required: false
       #default: "duartebrito.pw,www.duartebrito.pw,flexget.duartebrito.pw,hassio.duartebrito.pw,hassio-config.duartebrito.pw,mosquitto.duartebrito.pw,nas.duartebrito.pw,plex.duartebrito.pw,rancher.duartebrito.pw,transmission.duartebrito.pw,yts.duartebrito.pw"
       default: "duartebrito.com,www.duartebrito.com"
 
@@ -52,7 +52,7 @@
       description: ""
       label: "LetEncrypt Host Value"
       type: "string"
-      required: true
+      required: false
       #default: "duartebrito.pw,www.duartebrito.pw,flexget.duartebrito.pw,hassio.duartebrito.pw,hassio-config.duartebrito.pw,mosquitto.duartebrito.pw,nas.duartebrito.pw,plex.duartebrito.pw,rancher.duartebrito.pw,transmission.duartebrito.pw,yts.duartebrito.pw"
       default: "duartebrito.com,www.duartebrito.com"
 
@@ -60,7 +60,7 @@
       description: ""
       label: "LetEncrypt Email Value"
       type: "string"
-      required: true
+      required: false
       default: "sytertzp@gmail.com"
 
 nginx-proxy:
