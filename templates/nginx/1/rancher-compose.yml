@@ -1,8 +1,8 @@
-.catalog:
+version: '2'
+catalog:
   name: "nginx-proxy"
   version: "v2"
   description: "nginx"
-  uuid: nginx-proxy-1
   questions:
     #VOLUMES
     - variable: volumeHtml
@@ -63,12 +63,13 @@
       required: false
       default: "sytertzp@gmail.com"
 
-nginx-proxy:
-  scale: 1
-  start_on_create: true
-nginx-gen:
-  scale: 1
-  start_on_create: true
-nginx-letsencrypt:
-  scale: 1
-  start_on_create: true
+services:
+  nginx-proxy:
+    scale: 1
+    start_on_create: true
+  nginx-gen:
+    scale: 1
+    start_on_create: true
+  nginx-letsencrypt:
+    scale: 1
+    start_on_create: true
