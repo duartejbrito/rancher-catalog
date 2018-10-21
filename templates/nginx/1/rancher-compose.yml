@@ -33,12 +33,12 @@
       required: true
       default: "/host/dockers/NginxProxy/certs"
 
-    - variable: nginxTemplate
-      description: ""
-      label: "Path for Nginx Template"
-      type: "string"
-      required: true
-      default: "/host/dockers/NginxProxy/nginx.tmpl"
+#    - variable: nginxTemplate
+#      description: ""
+#      label: "Path for Nginx Template"
+#      type: "string"
+#      required: true
+#      default: "/host/dockers/NginxProxy/nginx.tmpl"
 
     - variable: virtualHost
       description: ""
@@ -66,9 +66,9 @@
 nginx-proxy:
   scale: 1
   start_on_create: true
-nginx-gen:
-  scale: 1
-  start_on_create: true
+#nginx-gen:
+#  scale: 1
+#  start_on_create: true
 nginx-letsencrypt:
   scale: 1
   start_on_create: true
