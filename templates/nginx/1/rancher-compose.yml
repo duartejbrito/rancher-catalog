@@ -40,6 +40,27 @@ catalog:
       required: true
       default: "/host/dockers/NginxProxy/nginx.tmpl"
 
+    - variable: volumeServerConfd
+      description: ""
+      label: "Path for conf.d"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxProxy/server/conf.d"
+    
+    - variable: volumeServerVhostd
+      description: ""
+      label: "Path for vhost.d"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxProxy/server/vhost.d"
+
+    - variable: volumeServerHtml
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxProxy/server/html"
+
     - variable: virtualHost
       description: ""
       label: "Virtual Host Value"
@@ -71,5 +92,8 @@ services:
     scale: 1
     start_on_create: true
   nginx-letsencrypt:
+    scale: 1
+    start_on_create: true
+  nginx-server:
     scale: 1
     start_on_create: true
