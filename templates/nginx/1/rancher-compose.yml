@@ -40,21 +40,13 @@
       required: true
       default: "/host/dockers/NginxProxy/nginx.tmpl"
 
-    - variable: defaultHost
-      description: ""
-      label: "Default Host Value"
-      type: "string"
-      required: true
-      #default: "duartebrito.pw,www.duartebrito.pw,flexget.duartebrito.pw,hassio.duartebrito.pw,hassio-config.duartebrito.pw,mosquitto.duartebrito.pw,nas.duartebrito.pw,plex.duartebrito.pw,rancher.duartebrito.pw,transmission.duartebrito.pw,yts.duartebrito.pw"
-      default: "duartebrito.com"
-
     - variable: virtualHost
       description: ""
       label: "Virtual Host Value"
       type: "string"
       required: true
       #default: "duartebrito.pw,www.duartebrito.pw,flexget.duartebrito.pw,hassio.duartebrito.pw,hassio-config.duartebrito.pw,mosquitto.duartebrito.pw,nas.duartebrito.pw,plex.duartebrito.pw,rancher.duartebrito.pw,transmission.duartebrito.pw,yts.duartebrito.pw"
-      default: "duartebrito.com,www.duartebrito.com,duartebrito.pw,www.duartebrito.pw"
+      default: "duartebrito.com,www.duartebrito.com"
 
     - variable: letsEncryptHost
       description: ""
@@ -62,7 +54,7 @@
       type: "string"
       required: true
       #default: "duartebrito.pw,www.duartebrito.pw,flexget.duartebrito.pw,hassio.duartebrito.pw,hassio-config.duartebrito.pw,mosquitto.duartebrito.pw,nas.duartebrito.pw,plex.duartebrito.pw,rancher.duartebrito.pw,transmission.duartebrito.pw,yts.duartebrito.pw"
-      default: "duartebrito.com,www.duartebrito.com,duartebrito.pw,www.duartebrito.pw"
+      default: "duartebrito.com,www.duartebrito.com,duartebrito.pw"
 
     - variable: letsEncryptEmail
       description: ""
