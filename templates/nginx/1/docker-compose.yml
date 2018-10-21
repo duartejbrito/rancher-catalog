@@ -1,7 +1,7 @@
 version: '2'
 services:
   nginx-proxy:
-    image: jwilder/nginx-proxy
+    image: nginx
     environment:
       VIRTUAL_HOST: ${virtualHost}
       LETSENCRYPT_HOST: ${letsEncryptHost}
