@@ -33,12 +33,12 @@
       required: true
       default: "/host/dockers/NginxProxy/certs"
 
-    - variable: nginxTemplate
-      description: ""
-      label: "Path for Nginx Template"
-      type: "string"
-      required: true
-      default: "/host/dockers/NginxProxy/nginx.tmpl"
+#    - variable: nginxTemplate
+#      description: ""
+#      label: "Path for Nginx Template"
+#      type: "string"
+#      required: true
+#      default: "/host/dockers/NginxProxy/nginx.tmpl"
 
     - variable: virtualHost
       description: ""

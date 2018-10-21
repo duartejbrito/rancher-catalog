@@ -17,18 +17,18 @@ services:
       - "80:80"
       - "443:443"
     labels:
-#      io.rancher.sidekicks: nginx-letsencrypt
-      io.rancher.sidekicks: nginx-gen, nginx-letsencrypt
-  nginx-gen:
-    image: jwilder/docker-gen
-    volumes_from:
-      - nginx-proxy
-    volumes:
-      - ${nginxTemplate}:/etc/docker-gen/templates/nginx.tmpl:ro
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-    links:
-      - nginx-proxy
-    command: "-notify-sighup nginx -watch -wait 5s:30s /etc/docker-gen/templates/nginx.tmpl /etc/nginx/conf.d/default.conf"
+      io.rancher.sidekicks: nginx-letsencrypt
+#      io.rancher.sidekicks: nginx-gen, nginx-letsencrypt
+#  nginx-gen:
+#    image: jwilder/docker-gen
+#    volumes_from:
+#      - nginx-proxy
+#    volumes:
+#      - ${nginxTemplate}:/etc/docker-gen/templates/nginx.tmpl:ro
+#      - /var/run/docker.sock:/tmp/docker.sock:ro
+#    links:
+#      - nginx-proxy
+#    command: "-notify-sighup nginx -watch -wait 5s:30s /etc/docker-gen/templates/nginx.tmpl /etc/nginx/conf.d/default.conf"
   nginx-letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion
     environment:
