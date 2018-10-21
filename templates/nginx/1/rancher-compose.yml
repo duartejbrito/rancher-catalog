@@ -66,9 +66,9 @@
 nginx-proxy:
   scale: 1
   start_on_create: true
-nginx-gen:
-  scale: 1
-  start_on_create: true
+#nginx-gen:
+#  scale: 1
+#  start_on_create: true
 nginx-letsencrypt:
   scale: 1
   start_on_create: true
