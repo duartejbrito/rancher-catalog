@@ -1,7 +1,7 @@
 version: '2'
 services:
   nginx-proxy:
-    image: nginx
+    image: jwilder/nginx-proxy
     restart: unless-stopped
     volumes:
       - ${volumeConfd}:/etc/nginx/conf.d:rw
