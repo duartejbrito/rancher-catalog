@@ -1,0 +1,66 @@
+version: '3'
+catalog:
+  name: "nginx-secure"
+  version: 3.0.0
+  description: "nginx"
+  questions:
+    #VOLUMES
+    - variable: vCertGeneratorConfd
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxSecure/nginx-cert-generator/conf.d"
+    
+    - variable: vCertGeneratorHtml
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxSecure/nginx-cert-generator/html"
+
+    - variable: vLetsencryptStagingEtc
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxSecure/letsencrypt/staging/etc"
+
+    - variable: vLetsencryptStagingLib
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxSecure/letsencrypt/staging/lib"
+
+    - variable: vLetsencryptStaginglog
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxSecure/letsencrypt/staging/log"
+
+    - variable: host
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "duartebrito.com"
+
+    - variable: wwwHost
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "www.duartebrito.com"
+
+services:
+  nginx-cert-generator:
+    scale: 1
+    start_on_create: true
+  certbot-staging:
+    scale: 1
+    start_on_create: true
+  certbot-staging-validation:
+    scale: 1
+    start_on_create: true
