@@ -19,26 +19,26 @@ services:
       - ${vLetsencryptStaginglog}:/var/log/letsencrypt:rw
     stdin_open: true
     tty: true
-    command: "certonly --webroot --register-unsafely-without-email --agree-tos --webroot-path=/data/letsencrypt --staging -d ${host} -d ${wwwHost}"
+    command: "certonly --webroot --register-unsafely-without-email --agree-tos --webroot-path=/data/letsencrypt --staging -d ${host} -d ${wwwHost} && --staging certificates"
     links:
       - nginx-cert-generator
     labels:
       io.rancher.container.start_once: "true"
 
-  certbot-staging-validation:
-    image: certbot/certbot
-    volumes:
-      - ${vLetsencryptStagingEtc}:/etc/letsencrypt:rw
-      - ${vLetsencryptStagingLib}:/var/lib/letsencrypt:rw
-      - ${vCertGeneratorHtml}:/data/letsencrypt:rw
-      - ${vLetsencryptStaginglog}:/var/log/letsencrypt:rw
-    stdin_open: true
-    tty: true
-    links:
-      - certbot-staging
-    command: "--staging certificates"
-    labels:
-      io.rancher.container.start_once: "true"
+#  certbot-staging-validation:
+#    image: certbot/certbot
+#    volumes:
+#      - ${vLetsencryptStagingEtc}:/etc/letsencrypt:rw
+#      - ${vLetsencryptStagingLib}:/var/lib/letsencrypt:rw
+#      - ${vCertGeneratorHtml}:/data/letsencrypt:rw
+#      - ${vLetsencryptStaginglog}:/var/log/letsencrypt:rw
+#    stdin_open: true
+#    tty: true
+#    links:
+#      - certbot-staging
+#    command: "--staging certificates"
+#    labels:
+#      io.rancher.container.start_once: "true"
 
 #  nginx:
 #    image: nginx

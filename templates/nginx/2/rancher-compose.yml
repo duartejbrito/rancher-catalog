@@ -61,6 +61,6 @@ services:
   certbot-staging:
     scale: 1
     start_on_create: true
-  certbot-staging-validation:
-    scale: 1
-    start_on_create: true
+#  certbot-staging-validation:
+#    scale: 1
+#    start_on_create: true
