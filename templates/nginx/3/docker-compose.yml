@@ -4,6 +4,7 @@ services:
     image: nginx
     environment:
       VIRTUAL_HOST: ${virtualHost}
+      VIRTUAL_PORT: 9080
       LETSENCRYPT_HOST: ${letsEncryptHost}
       LETSENCRYPT_EMAIL: ${letsEncryptEmail}
     ports:
