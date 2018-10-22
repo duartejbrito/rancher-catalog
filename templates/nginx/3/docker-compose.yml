@@ -13,4 +13,3 @@ services:
       - ${vConfd}:/etc/nginx/conf.d:rw
       - ${vHtml}:/usr/share/nginx/html:rw
       - ${vCerts}:/etc/nginx/certs:rw
-    network_mode: host
