@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 catalog:
   name: "nginx-secure"
   version: 3.0.0
