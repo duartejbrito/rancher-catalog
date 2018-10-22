@@ -11,6 +11,8 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     ports:
       - "80:80"
+    labels:
+      io.rancher.sidekicks: nginx-gen, nginx-letsencrypt
   nginx-gen:
     image: jwilder/docker-gen
     volumes_from:
