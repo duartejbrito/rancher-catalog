@@ -1,0 +1,12 @@
+version: '2'
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ${vConfd}:/etc/nginx/conf.d:rw
+      - ${vHtml}:/usr/share/nginx/html:rw
+      - ${vLetsencryptProdEtc}:/etc/letsencrypt:rw
+    
