@@ -94,6 +94,3 @@ services:
   nginx-letsencrypt:
     scale: 1
     start_on_create: true
-  nginx-server:
-    scale: 1
-    start_on_create: true
