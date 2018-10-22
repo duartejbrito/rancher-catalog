@@ -54,6 +54,48 @@ catalog:
       required: true
       default: "www.duartebrito.com"
 
+    - variable: vLetsencryptProdEtc
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxSecure/letsencrypt/production/etc"
+
+    - variable: vLetsencryptProdLib
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxSecure/letsencrypt/production/lib"
+
+    - variable: vLetsencryptProdlog
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxSecure/letsencrypt/production/log"
+
+    - variable: email
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "sytertzp@gmail.com"
+
+    - variable: vConfd
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxSecure/nginx/conf.d"
+    
+    - variable: vHtml
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxSecure/nginx/html"
+
 services:
   nginx-cert-generator:
     scale: 1
@@ -61,6 +103,12 @@ services:
   certbot-staging:
     scale: 1
     start_on_create: true
-#  certbot-staging-validation:
-#    scale: 1
-#    start_on_create: true
+  certbot-staging-validation:
+    scale: 1
+    start_on_create: true
+  certbot-production:
+    scale: 1
+    start_on_create: false
+  nginx:
+    scale: 1
+    start_on_create: false
