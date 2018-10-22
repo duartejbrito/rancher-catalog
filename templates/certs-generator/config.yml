@@ -1,0 +1,6 @@
+name: certs generator
+description: |
+  cets generator
+version: v1
+category: Web Server
+maintainer: Duarte Brito <sytertzp@gmail.com>

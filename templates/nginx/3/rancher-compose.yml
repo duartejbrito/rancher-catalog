@@ -4,78 +4,22 @@ catalog:
   version: 4.0.0
   description: "nginx"
   questions:
-    #VOLUMES
-    - variable: vCertGeneratorConfd
-      description: ""
-      label: "Path for Html"
-      type: "string"
-      required: true
-      default: "/host/dockers/NginxSecure/nginx-cert-generator/conf.d"
-    
-    - variable: vCertGeneratorHtml
-      description: ""
-      label: "Path for Html"
-      type: "string"
-      required: true
-      default: "/host/dockers/NginxSecure/nginx-cert-generator/html"
 
-    - variable: vLetsencryptStagingEtc
+    - variable: virtualHost
       description: ""
       label: "Path for Html"
       type: "string"
       required: true
-      default: "/host/dockers/NginxSecure/letsencrypt/staging/etc"
+      default: "duartebrito.com,www.duartebrito.com"
 
-    - variable: vLetsencryptStagingLib
+    - variable: letsEncryptHost
       description: ""
       label: "Path for Html"
       type: "string"
       required: true
-      default: "/host/dockers/NginxSecure/letsencrypt/staging/lib"
+      default: "duartebrito.com,www.duartebrito.com"
 
-    - variable: vLetsencryptStaginglog
-      description: ""
-      label: "Path for Html"
-      type: "string"
-      required: true
-      default: "/host/dockers/NginxSecure/letsencrypt/staging/log"
-
-    - variable: host
-      description: ""
-      label: "Path for Html"
-      type: "string"
-      required: true
-      default: "duartebrito.com"
-
-    - variable: wwwHost
-      description: ""
-      label: "Path for Html"
-      type: "string"
-      required: true
-      default: "www.duartebrito.com"
-
-    - variable: vLetsencryptProdEtc
-      description: ""
-      label: "Path for Html"
-      type: "string"
-      required: true
-      default: "/host/dockers/NginxSecure/letsencrypt/production/etc"
-
-    - variable: vLetsencryptProdLib
-      description: ""
-      label: "Path for Html"
-      type: "string"
-      required: true
-      default: "/host/dockers/NginxSecure/letsencrypt/production/lib"
-
-    - variable: vLetsencryptProdlog
-      description: ""
-      label: "Path for Html"
-      type: "string"
-      required: true
-      default: "/host/dockers/NginxSecure/letsencrypt/production/log"
-
-    - variable: email
+    - variable: letsEncryptEmail
       description: ""
       label: "Path for Html"
       type: "string"
@@ -87,16 +31,23 @@ catalog:
       label: "Path for Html"
       type: "string"
       required: true
-      default: "/host/dockers/NginxSecure/nginx/conf.d"
-    
+      default: "/host/dockers/Nginx/v4/conf.d"
+
     - variable: vHtml
       description: ""
       label: "Path for Html"
       type: "string"
       required: true
-      default: "/host/dockers/NginxSecure/nginx/html"
+      default: "/host/dockers/Nginx/v4/html"
+
+    - variable: vCerts
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/certs-generator/certs"
 
 services:
   nginx:
     scale: 1
-    start_on_create: false
+    start_on_create: true
