@@ -2,10 +2,10 @@ version: '2'
 services:
   nginx:
     image: nginx
-    #environment:
-      #VIRTUAL_HOST: ${virtualHost}
-      #LETSENCRYPT_HOST: ${letsEncryptHost}
-      #LETSENCRYPT_EMAIL: ${letsEncryptEmail}
+    environment:
+      VIRTUAL_HOST: ${virtualHost}
+      LETSENCRYPT_HOST: ${letsEncryptHost}
+      LETSENCRYPT_EMAIL: ${letsEncryptEmail}
     ports:
       - "80:80"
       - "443:443"
