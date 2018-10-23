@@ -1,0 +1,46 @@
+version: '2'
+catalog:
+  name: "certs-generator"
+  version: 2.0.0
+  description: "certs-generator"
+  questions:
+    #VOLUMES
+    - variable: volumeHtml
+      description: ""
+      label: "Path for Html"
+      type: "string"
+      required: true
+      default: "/host/dockers/certs-generator/html"
+
+    - variable: volumeConfd
+      description: ""
+      label: "Path for conf.d"
+      type: "string"
+      required: true
+      default: "/host/dockers/certs-generator/conf.d"
+    
+    - variable: volumeVhostd
+      description: ""
+      label: "Path for vhost.d"
+      type: "string"
+      required: true
+      default: "/host/dockers/certs-generator/vhost.d"
+
+    - variable: volumeCerts
+      description: ""
+      label: "Path for certs"
+      type: "string"
+      required: true
+      default: "/host/dockers/certs-generator/certs"
+
+    - variable: volumeLetsencrypt
+      description: ""
+      label: "Path for Letsencrypt"
+      type: "string"
+      required: true
+      default: "/host/dockers/certs-generator/letsencrypt"
+
+services:
+  nginx-proxy:
+    scale: 1
+    start_on_create: true
