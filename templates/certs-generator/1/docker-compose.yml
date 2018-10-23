@@ -1,7 +1,7 @@
 version: '2'
 services:
   nginx-proxy:
-    image: doocker4pro/rancher-nginx-proxy
+    image: syter/rancher-nginx-proxy
     environment:
       DEFAULT_HOST: "duartebrito.com"
       DEFAULT_EMAIL: "sytertzp@gmail.com"
