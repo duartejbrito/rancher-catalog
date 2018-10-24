@@ -1,0 +1,17 @@
+version: '2'
+services:
+  nginx-proxy:
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /host/dockers/nginx-proxy-test/proxy-conf.d:/etc/nginx/conf.d:rw
+  nginx:
+    image: nginx
+    ports:
+      - "9080:80"
+      - "9443:443"
+    volumes:
+      - /host/dockers/nginx-proxy-test/conf.d:/etc/nginx/conf.d:rw
+      - /host/dockers/nginx-proxy-test/conf.d:/usr/share/nginx/html:rw
