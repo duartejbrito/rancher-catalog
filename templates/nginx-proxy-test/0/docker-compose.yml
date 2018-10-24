@@ -14,4 +14,4 @@ services:
       - "9443:443"
     volumes:
       - /host/dockers/nginx-proxy-test/conf.d:/etc/nginx/conf.d:rw
-      - /host/dockers/nginx-proxy-test/conf.d:/usr/share/nginx/html:rw
+      - /host/dockers/nginx-proxy-test/html:/usr/share/nginx/html:rw
