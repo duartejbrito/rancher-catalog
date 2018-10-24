@@ -13,7 +13,8 @@ services:
       - ${PATH}/htpasswd:/etc/nginx/htpasswd
       - ${PATH}/vhost.d:/etc/nginx/vhost.d
       - ${PATH}/letsencrypt:/etc/letsencrypt
-      - ${PATH}/conf.d:/etc/nginx/conf.d:rw
+      - ${PATH}/conf.d:/etc/nginx/conf.d
+      - ${PATH}/certs:/etc/nginx/certs
     tty: true
     ports:
       - ${DEFAULT_PORT}:80/tcp

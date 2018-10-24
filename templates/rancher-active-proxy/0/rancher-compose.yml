@@ -8,10 +8,11 @@
       type: string
     - variable: DEFAULT_HOST
       label: "Default Virtual Host to use"
+      default: "duartebrito.com"
       type: string
     - variable: DEFAULT_EMAIL
       label: "Default Email to use for Letsencrypt"
-      default: "foo@bar.com"
+      default: "sytertzp@gmail.com"
       type: string    
     - variable: DEFAULT_PORT
       label: "Default Port to use"

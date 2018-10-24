@@ -2,11 +2,6 @@ version: '2'
 services:
   nginx:
     image: nginx
-    environment:
-      VIRTUAL_HOST: ${virtualHost}
-      VIRTUAL_PORT: 9080
-      LETSENCRYPT_HOST: ${letsEncryptHost}
-      LETSENCRYPT_EMAIL: ${letsEncryptEmail}
     ports:
       - "9080:80"
       - "9443:443"
