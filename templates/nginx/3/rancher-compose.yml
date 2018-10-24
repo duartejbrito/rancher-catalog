@@ -45,7 +45,7 @@ catalog:
       label: "Path for Html"
       type: "string"
       required: true
-      default: "/host/dockers/certs-generator/certs"
+      default: "/host/dockers/rancher-active-proxy/certs"
 
 services:
   nginx:
