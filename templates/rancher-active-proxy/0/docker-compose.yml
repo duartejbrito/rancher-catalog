@@ -22,3 +22,4 @@ services:
       - 443:443/tcp
     labels:
       io.rancher.container.pull_image: always
+    network_mode: host
