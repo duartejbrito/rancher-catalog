@@ -15,6 +15,7 @@ services:
       - ${PATH}/letsencrypt:/etc/letsencrypt
       - ${PATH}/conf.d:/etc/nginx/conf.d
       - ${PATH}/certs:/etc/nginx/certs
+      - ${PATH}/log:/var/log/nginx
     tty: true
     ports:
       - ${DEFAULT_PORT}:80/tcp
