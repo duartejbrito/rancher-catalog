@@ -10,8 +10,8 @@ services:
       - ${vHtml}:/usr/share/nginx/html:rw
       - ${vCerts}:/etc/nginx/certs:rw
     labels:
-      rap.host: duartebrito.com=>http:9080
-      rap.le_host: duartebrito.com
+      rap.host: duartebrito.com=>http:9080,www.duartebrito.com=>http:9080
+      rap.le_host: duartebrito.com,www.duartebrito.com
       rap.le_email: sytertzp@gmail.com
       rap.le_bypass: true
     network_mode: default
