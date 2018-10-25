@@ -1,7 +1,7 @@
 version: '2'
 services:
   rancher-active-proxy:
-    image: syter/rancher-nginx-proxy
+    image: adi90x/rancher-active-proxy
     environment:
       DEFAULT_HOST: ${DEFAULT_HOST}
       DEFAULT_EMAIL: ${DEFAULT_EMAIL}
