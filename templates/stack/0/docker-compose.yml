@@ -25,12 +25,12 @@ services:
   duartebrito:
     image: nginx
     ports:
-      - "9080:80"
+      - "0.0.0.0:9080:80"
     volumes:
       - ${vConfd}:/etc/nginx/conf.d:rw
       - ${vHtml}:/usr/share/nginx/html:rw
       - ${vCerts}:/etc/nginx/certs:rw
-    network_mode: default
+    network_mode: host
     labels:
       rap.host: duartebrito.com=>http:9080,www.duartebrito.com=>http:9080
       rap.le_host: duartebrito.com,www.duartebrito.com
