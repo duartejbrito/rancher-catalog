@@ -25,7 +25,7 @@ services:
   duartebrito:
     image: nginx
     ports:
-      - "0.0.0.0:9080:80"
+      - "192.168.1.20:9080:80"
     volumes:
       - ${vConfd}:/etc/nginx/conf.d:rw
       - ${vHtml}:/usr/share/nginx/html:rw
