@@ -1,0 +1,23 @@
+.catalog:
+  name: "Tautulli"
+  version: "v1"
+  description: "Tautulli"
+  uuid: tautulli-1
+  questions:
+    #VOLUMES
+    - variable: volumeConfig
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/tautulli/config"
+    - variable: volumePlexLogs
+      description: ""
+      label: "Path for Plex Logs"
+      type: "string"
+      required: true
+      default: "/host/dockers/PlexMediaServer/config/Library/Application Support/Plex Media Server/Logs"
+
+tautulli:
+  scale: 1
+  start_on_create: true

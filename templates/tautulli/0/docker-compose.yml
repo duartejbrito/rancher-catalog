@@ -1,0 +1,13 @@
+version: '2'
+services:
+  tautulli:
+    image: tautulli/tautulli
+    restart: unless-stopped
+    volumes:
+    - ${volumeConfig}:/config:rw
+    - ${volumePlexLogs:/plex_logs:ro
+    ports:
+    - '8181:8181'
+    environment:
+    - TZ=Europe/Lisbon
+    network_mode: host
