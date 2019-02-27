@@ -3,9 +3,9 @@ services:
   nginx:
     image: nginx
     restart: unless-stopped
-    volumes:
-      - ${volumeHtml}:/var/www/html:rw
-      - ${volumeCustomConf}:/etc/nginx/conf.d:rw
+#    volumes:
+#      - ${volumeHtml}:/var/www/html:rw
+#      - ${volumeCustomConf}:/etc/nginx/conf.d:rw
     ports:
       - "80:80"
     network_mode: host
