@@ -15,6 +15,7 @@ services:
       - ${configFile}:/app/config/production.json
       - ${volumeData}:/data
       - ${volumeLetsencrypt}:/etc/letsencrypt
+    network_mode: host
     depends_on:
       - nginx-proxy-manager-db
   nginx-proxy-manager-db:
