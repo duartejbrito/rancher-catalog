@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 services:
   nginx-proxy-manager:
     image: jc21/nginx-proxy-manager:latest
@@ -16,7 +16,7 @@ services:
       - ${volumeData}:/data
       - ${volumeLetsencrypt}:/etc/letsencrypt
     depends_on:
-      - db
+      - nginx-proxy-manager-db
   nginx-proxy-manager-db:
     image: mariadb
     restart: always
