@@ -16,7 +16,6 @@ services:
       - ${volumeApp}:/app
       - ${volumeData}:/data
       - ${volumeLetsencrypt}:/etc/letsencrypt
-    network_mode: host
     depends_on:
       - nginx-proxy-manager-db
     links:
