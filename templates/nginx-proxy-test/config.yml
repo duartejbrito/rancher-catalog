@@ -1,5 +1,0 @@
-name: nginx proxy test
-description: |
-version: "0.0.1"
-category: Proxy
-maintainer: Duarte Brito <sytertzp@gmail.com>

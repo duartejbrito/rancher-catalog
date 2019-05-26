@@ -1,6 +1,6 @@
-name: Alpine
+name: nginx-proxy-manager
 description: |
-  Alpine
+  nginx-proxy-manager
 version: v1
-category: SO
+category: Web Server
 maintainer: Duarte Brito <sytertzp@gmail.com>

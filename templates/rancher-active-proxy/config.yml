@@ -1,6 +1,0 @@
-name: Rancher Active Proxy
-description: |
-  Automatic Active Proxy for Rancher with Let's Encrypt support
-version: "0.0.1"
-category: Proxy
-maintainer: Duarte Brito <sytertzp@gmail.com>

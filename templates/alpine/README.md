@@ -1,3 +1,0 @@
-# Alpine
-
-Alpine
