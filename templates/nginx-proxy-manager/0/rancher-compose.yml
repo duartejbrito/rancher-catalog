@@ -36,6 +36,3 @@
 nginx-proxy-manager:
   scale: 1
   start_on_create: true
-nginx-proxy-manager-db:
-  scale: 1
-  start_on_create: true

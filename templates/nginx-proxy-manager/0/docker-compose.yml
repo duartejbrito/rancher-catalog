@@ -17,10 +17,10 @@ services:
       - ${volumeData}:/data
       - ${volumeLetsencrypt}:/etc/letsencrypt
     depends_on:
-      - nginx-proxy-manager-db
+      - db
     links:
-      - nginx-proxy-manager-db
-  nginx-proxy-manager-db:
+      - db
+  db:
     image: mariadb
     restart: always
     environment:
