@@ -12,6 +12,13 @@
       required: true
       default: "/host/dockers/nginx-proxy-manager/config.json"
 
+    - variable: volumeApp
+      description: ""
+      label: "Path for app directory"
+      type: "string"
+      required: true
+      default: "/host/dockers/nginx-proxy-manager/app"
+
     - variable: volumeData
       description: ""
       label: "Path for data directory"

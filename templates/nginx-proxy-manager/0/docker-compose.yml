@@ -13,12 +13,15 @@ services:
     volumes:
       # Make sure this config.json file exists as per instructions above:
       - ${configFile}:/app/config/production.json
+      - ${volumeApp}:/app
       - ${volumeData}:/data
       - ${volumeLetsencrypt}:/etc/letsencrypt
     network_mode: host
     environment:
       X_FRAME_OPTIONS: "sameorigin"
     depends_on:
+      - nginx-proxy-manager-db
+    links:
       - nginx-proxy-manager-db
   nginx-proxy-manager-db:
     image: mariadb
