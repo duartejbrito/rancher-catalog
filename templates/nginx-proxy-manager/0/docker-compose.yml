@@ -16,6 +16,8 @@ services:
       - ${volumeData}:/data
       - ${volumeLetsencrypt}:/etc/letsencrypt
     network_mode: host
+    environment:
+      X_FRAME_OPTIONS: "sameorigin"
     depends_on:
       - nginx-proxy-manager-db
   nginx-proxy-manager-db:
