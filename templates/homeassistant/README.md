@@ -1,3 +1,0 @@
-# Home Assistant
-
-Home Assistant

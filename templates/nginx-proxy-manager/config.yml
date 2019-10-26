@@ -1,6 +1,0 @@
-name: nginx-proxy-manager
-description: |
-  nginx-proxy-manager
-version: v1
-category: Web Server
-maintainer: Duarte Brito <sytertzp@gmail.com>

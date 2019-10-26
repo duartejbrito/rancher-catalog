@@ -1,3 +1,0 @@
-# Hassio Configurator
-
-Hassio Configurator
