@@ -25,6 +25,6 @@ services:
         - db
 
   wordpress-lb:
-    image: rancher/lb-service-haproxy:v0.9.13
+    image: rancher/lb-service-haproxy:v0.7.15
     ports:
       - ${public_port}:${public_port}
