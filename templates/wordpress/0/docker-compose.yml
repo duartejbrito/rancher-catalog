@@ -1,0 +1,32 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${db_database_name}
+      MYSQL_USER: ${db_user}
+      MYSQL_PASSWORD: ${db_user_password}
+      MYSQL_ROOT_PASSWORD: ${db_root_password}
+    volumes:
+      - ${volumeDB}:/var/lib/mysql
+
+  wordpress:
+    image: wordpress
+    restart: unless-stopped
+    ports:
+      - ${public_port}:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: ${db_user}
+      WORDPRESS_DB_PASSWORD: ${db_user_password}
+      WORDPRESS_DB_NAME: ${db_database_name}
+    volumes:
+      - ${volumeHtml}:/var/www/html
+    depends_on:
+        - db
+
+  wordpress-lb:
+    image: rancher/lb-service-haproxy:v0.7.5
+    ports:
+      - ${public_port}:${public_port}

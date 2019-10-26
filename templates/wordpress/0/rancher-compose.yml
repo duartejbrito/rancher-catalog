@@ -1,0 +1,74 @@
+.catalog:
+  name: "Wordpress"
+  version: "v1"
+  description: "Wordpress"
+  uuid: wordpress-1
+  questions:
+    - variable: public_port
+      description: "public port to access the WordPress site"
+      label: "Public Port"
+      required: true
+      default: "80"
+      type: "int"
+    - variable: db_root_password
+      description: "DB root password, set on first run"
+      label: "DB Root Password"
+      required: true
+      default: "db_my_root"
+      type: "string"
+    - variable: db_user
+      description: "DB database user, created on first run"
+      label: "DB Database User"
+      required: true
+      default: "wordpress_user"
+      type: "string"
+    - variable: db_user_password
+      description: "DB database user password, set on first run"
+      label: "DB Database User Password"
+      required: true
+      default: "wordpress_password"
+      type: "string"
+    - variable: db_database_name
+      description: "WordPress database name"
+      label: "WordPress database name"
+      required: true
+      default: "wordpress_db"
+      type: "string"
+    - variable: wordpress_username
+      description: "WordPress application username"
+      label: "WordPress application username"
+      required: true
+      default: "admin"
+      type: "string"
+    - variable: wordpress_password
+      description: "WordPress application password"
+      label: "WordPress application password"
+      required: true
+      default: "password"
+      type: "string"
+
+wordpress-lb:
+  scale: 1
+  lb_config:
+    certs: []
+    port_rules:
+    - protocol: http
+      service: wordpress
+      source_port: ${public_port}
+      target_port: 80
+  health_check:
+    response_timeout: 2000
+    healthy_threshold: 2
+    interval: 2000
+    port: 42
+    unhealthy_threshold: 3
+wordpress:
+  scale: 1
+  retain_ip: true
+  health_check:
+    port: 80
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: 'GET / HTTP/1.0'
+    healthy_threshold: 2
+    response_timeout: 5000
