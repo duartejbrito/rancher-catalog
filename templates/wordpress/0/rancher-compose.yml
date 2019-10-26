@@ -67,21 +67,21 @@ catalog:
       type: "string"
 
 services:
-  wordpress-lb:
-    scale: 1
-    lb_config:
-      certs: []
-      port_rules:
-      - protocol: http
-        service: wordpress
-        source_port: ${public_port}
-        target_port: 80
-    health_check:
-      response_timeout: 2000
-      healthy_threshold: 2
-      interval: 2000
-      port: 42
-      unhealthy_threshold: 3
+#  wordpress-lb:
+#    scale: 1
+#    lb_config:
+#      certs: []
+#      port_rules:
+#      - protocol: http
+#        service: wordpress
+#        source_port: ${public_port}
+#        target_port: 80
+#    health_check:
+#      response_timeout: 2000
+#      healthy_threshold: 2
+#      interval: 2000
+#      port: 42
+#      unhealthy_threshold: 3
   wordpress:
     scale: 1
     retain_ip: true

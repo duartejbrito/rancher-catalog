@@ -24,10 +24,12 @@ services:
       WORDPRESS_DB_USER: ${db_user}
       WORDPRESS_DB_PASSWORD: ${db_user_password}
       WORDPRESS_DB_NAME: ${db_database_name}
+    ports:
+      - ${public_port}:80
     volumes:
       - ${volumeHtml}:/var/www/html
 
-  wordpress-lb:
-    image: rancher/lb-service-haproxy:v0.7.15
-    ports:
-      - ${public_port}:${public_port}
+#  wordpress-lb:
+#    image: rancher/lb-service-haproxy:v0.7.15
+#    ports:
+#      - ${public_port}:${public_port}
