@@ -23,6 +23,12 @@ catalog:
       required: true
       default: "80"
       type: "int"
+    - variable: db_port
+      description: "database port to access the database"
+      label: "Database Port"
+      required: true
+      default: "3306"
+      type: "int"
     - variable: db_root_password
       description: "DB root password, set on first run"
       label: "DB Root Password"
