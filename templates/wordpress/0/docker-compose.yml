@@ -14,8 +14,6 @@ services:
   wordpress:
     image: wordpress
     restart: unless-stopped
-    ports:
-      - ${public_port}:80
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: ${db_user}
