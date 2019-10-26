@@ -4,6 +4,18 @@
   description: "Wordpress"
   uuid: wordpress-1
   questions:
+    - variable: volumeDB
+      description: "Path for store the Database"
+      label: "Path for Database"
+      required: true
+      default: "/host/dockers/Wordpress/db"
+      type: "string"
+    - variable: volumeHtml
+      description: "Path for store the Html"
+      label: "Path for Html"
+      required: true
+      default: "/host/dockers/Wordpress/html"
+      type: "string"
     - variable: public_port
       description: "public port to access the WordPress site"
       label: "Public Port"
