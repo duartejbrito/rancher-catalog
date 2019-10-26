@@ -9,8 +9,8 @@ services:
       MYSQL_USER: ${db_user}
       MYSQL_PASSWORD: ${db_user_password}
       MYSQL_ROOT_PASSWORD: ${db_root_password}
-#    ports:
-#      - ${db_port}:3306
+    ports:
+      - ${db_port}:3306
     volumes:
       - ${volumeDB}:/var/lib/mysql
 
@@ -29,7 +29,7 @@ services:
     volumes:
       - ${volumeHtml}:/var/www/html
 
-#  wordpress-lb:
-#    image: rancher/lb-service-haproxy:v0.7.15
-#    ports:
-#      - ${public_port}:${public_port}
+  wordpress-lb:
+    image: rancher/lb-service-haproxy:v0.7.15
+    ports:
+      - ${public_port}:${public_port}
