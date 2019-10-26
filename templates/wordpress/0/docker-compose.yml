@@ -9,8 +9,8 @@ services:
       MYSQL_USER: ${db_user}
       MYSQL_PASSWORD: ${db_user_password}
       MYSQL_ROOT_PASSWORD: ${db_root_password}
-    ports:
-      - ${db_port}:3306
+#    ports:
+#      - ${db_port}:3306
     volumes:
       - ${volumeDB}:/var/lib/mysql
 
@@ -20,7 +20,7 @@ services:
     image: wordpress
     restart: unless-stopped
     environment:
-      WORDPRESS_DB_HOST: database:${db_port}
+      WORDPRESS_DB_HOST: database
       WORDPRESS_DB_USER: ${db_user}
       WORDPRESS_DB_PASSWORD: ${db_user_password}
       WORDPRESS_DB_NAME: ${db_database_name}
