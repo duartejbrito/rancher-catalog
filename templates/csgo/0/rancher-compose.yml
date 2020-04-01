@@ -1,0 +1,82 @@
+.catalog:
+  name: "CS:GO Dedicated server"
+  version: "v1"
+  description: "CS:GO Dedicated server"
+  uuid: csgo-1
+  questions:
+    - variable: VOLUME
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/csgo/config"
+    - variable: PORT
+      description: ""
+      label: "Port for server"
+      type: "int"
+      required: true
+      default: "27015"
+    - variable: PORTTV
+      description: ""
+      label: "Port for server (TV)"
+      type: "int"
+      required: true
+      default: "27020"
+    - variable: TOKEN
+      description: "https://steamcommunity.com/dev/managegameservers"
+      label: "Token"
+      type: "string"
+      required: true
+      default: "XPTOTOKEN123456789"
+    - variable: RCONPW
+      description: ""
+      label: "RCONPW"
+      type: "string"
+      required: true
+      default: "changeme"
+    - variable: PW
+      description: ""
+      label: "PW"
+      type: "string"
+      required: true
+      default: "changeme"
+    - variable: FPSMAX
+      description: ""
+      label: "FPSMAX"
+      type: "int"
+      required: true
+      default: "300"
+    - variable: TICKRATE
+      description: ""
+      label: "TICKRATE"
+      type: "int"
+      required: true
+      default: "128"
+    - variable: MAXPLAYERS
+      description: ""
+      label: "MAXPLAYERS"
+      type: "int"
+      required: true
+      default: "14"
+    - variable: STARTMAP
+      description: ""
+      label: "STARTMAP"
+      type: "string"
+      required: true
+      default: "de_dust2"
+    - variable: REGION
+      description: ""
+      label: "REGION"
+      type: "int"
+      required: true
+      default: "3"
+    - variable: MAPGROUP
+      description: ""
+      label: "MAPGROUP"
+      type: "string"
+      required: true
+      default: "mg_active"
+
+csgo:
+  scale: 1
+  start_on_create: true
