@@ -15,13 +15,13 @@
       label: "Port for server"
       type: "int"
       required: true
-      default: "27015"
+      default: 27015
     - variable: PORTTV
       description: ""
       label: "Port for server (TV)"
       type: "int"
       required: true
-      default: "27020"
+      default: 27020
     - variable: TOKEN
       description: "https://steamcommunity.com/dev/managegameservers"
       label: "Token"
@@ -45,19 +45,19 @@
       label: "FPSMAX"
       type: "int"
       required: true
-      default: "300"
+      default: 300
     - variable: TICKRATE
       description: ""
       label: "TICKRATE"
       type: "int"
       required: true
-      default: "128"
+      default: 128
     - variable: MAXPLAYERS
       description: ""
       label: "MAXPLAYERS"
       type: "int"
       required: true
-      default: "14"
+      default: 14
     - variable: STARTMAP
       description: ""
       label: "STARTMAP"
@@ -69,7 +69,7 @@
       label: "REGION"
       type: "int"
       required: true
-      default: "3"
+      default: 3
     - variable: MAPGROUP
       description: ""
       label: "MAPGROUP"
