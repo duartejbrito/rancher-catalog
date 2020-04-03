@@ -1,21 +1,35 @@
 version: '2'
 services:
   csgo:
-    image: cm2network/csgo:sourcemod
+    image: kmallea/csgo
     restart: unless-stopped
+    network_mode: host
+    stdin_open: true
+    tty: true
     volumes:
-    - ${VOLUME}:/home/steam/csgo-dedicated:rw
+    - ${VOLUME}:/home/steam/csgo:rw
     ports:
     - ${PORT}:27015
     - ${PORTTV}:27020
     environment:
-    - SRCDS_TOKEN=${TOKEN}
-    - SRCDS_RCONPW=${RCONPW}
-    - SRCDS_PW=${PW}
-    - SRCDS_FPSMAX=${FPSMAX}
-    - SRCDS_TICKRATE=${TICKRATE}
-    - SRCDS_MAXPLAYERS=${MAXPLAYERS}
-    - SRCDS_STARTMAP=${STARTMAP}
-    - SRCDS_REGION=${REGION}
-    - SRCDS_MAPGROUP=${MAPGROUP}
-    network_mode: host
+    - SERVER_HOSTNAME=${HOSTNAME}
+    - SERVER_PASSWORD=${PW}
+    - RCON_PASSWORD=${RCONPW}
+    - STEAM_ACCOUNT=${TOKEN}
+    - AUTHKEY=${AUTHKEY}
+    - SOURCEMOD_ADMINS=${SOURCEMOD_ADMINS}
+    - IP=0.0.0.0
+    - PORT=27015
+    - TV_PORT=27020
+    - TICKRATE=${TICKRATE}
+    - FPS_MAX=${FPSMAX}
+    - GAME_TYPE=${GAME_TYPE}
+    - GAME_MODE=${GAME_MODE}
+    - MAP=${STARTMAP}
+    - MAPGROUP=${MAPGROUP}
+    - MAXPLAYERS=${MAXPLAYERS}
+    - TV_ENABLE=${TV_ENABLE}
+    - LAN=${LAN}
+    - RETAKES=${RETAKES}
+    - INSTALL_PLUGINS=${INSTALL_PLUGINS}
+    

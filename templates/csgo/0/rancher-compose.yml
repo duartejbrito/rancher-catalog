@@ -22,61 +22,108 @@
       type: "int"
       required: true
       default: 27020
-    - variable: TOKEN
-      description: "https://steamcommunity.com/dev/managegameservers"
-      label: "Token"
+    - variable: HOSTNAME
+      description: ""
+      label: "Hostname"
       type: "string"
       required: true
-      default: "XPTOTOKEN123456789"
+      default: "Counter-Strike: Global Offensive Dedicated Server"
+    - variable: PW
+      description: ""
+      label: "PW"
+      type: "string"
+      required: false
+      default: ""
     - variable: RCONPW
       description: ""
       label: "RCONPW"
       type: "string"
       required: true
       default: "changeme"
-    - variable: PW
-      description: ""
-      label: "PW"
+    - variable: TOKEN
+      description: "https://steamcommunity.com/dev/managegameservers"
+      label: "Token"
       type: "string"
       required: true
-      default: "changeme"
-    - variable: FPSMAX
+      default: "XPTOTOKEN123456789"
+    - variable: AUTHKEY
+      description: "https://steamcommunity.com/dev/apikey"
+      label: "AUTHKEY"
+      type: "string"
+      required: false
+      default: ""
+    - variable: SOURCEMOD_ADMINS
       description: ""
-      label: "FPSMAX"
-      type: "int"
-      required: true
-      default: 300
+      label: "SOURCEMOD_ADMINS"
+      type: "string"
+      required: false
+      default: ""
     - variable: TICKRATE
       description: ""
       label: "TICKRATE"
       type: "int"
       required: true
       default: 128
-    - variable: MAXPLAYERS
+    - variable: FPSMAX
       description: ""
-      label: "MAXPLAYERS"
+      label: "FPSMAX"
       type: "int"
       required: true
-      default: 14
+      default: 300
+    - variable: GAME_TYPE
+      description: "https://developer.valvesoftware.com/wiki/CSGO_Game_Mode_Commands"
+      label: "GAME_TYPE"
+      type: "int"
+      required: true
+      default: 0
+    - variable: GAME_MODE
+      description: "https://developer.valvesoftware.com/wiki/CSGO_Game_Mode_Commands"
+      label: "GAME_MODE"
+      type: "int"
+      required: true
+      default: 0
     - variable: STARTMAP
       description: ""
       label: "STARTMAP"
       type: "string"
       required: true
       default: "de_dust2"
-    - variable: REGION
-      description: ""
-      label: "REGION"
-      type: "int"
-      required: true
-      default: 3
     - variable: MAPGROUP
       description: ""
       label: "MAPGROUP"
       type: "string"
       required: true
       default: "mg_active"
-
+    - variable: MAXPLAYERS
+      description: ""
+      label: "MAXPLAYERS"
+      type: "int"
+      required: true
+      default: 14
+    - variable: TV_ENABLE
+      description: ""
+      label: "TV_ENABLE"
+      type: "int"
+      required: true
+      default: 0
+    - variable: LAN
+      description: ""
+      label: "LAN"
+      type: "int"
+      required: true
+      default: 0
+    - variable: RETAKES
+      description: ""
+      label: "RETAKES"
+      type: "int"
+      required: true
+      default: 0
+    - variable: INSTALL_PLUGINS
+      description: ""
+      label: "INSTALL_PLUGINS"
+      type: "string"
+      required: true
+      default: "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6478-linux.tar.gz https://github.com/splewis/csgo-pug-setup/releases/download/2.0.5/pugsetup_2.0.5.zip https://github.com/splewis/csgo-retakes/releases/download/v0.3.4/retakes_0.3.4.zip https://github.com/b3none/retakes-instadefuse/releases/download/1.4.0/retakes-instadefuse.smx https://github.com/b3none/retakes-autoplant/releases/download/2.3.0/retakes_autoplant.smx https://github.com/b3none/retakes-hud/releases/download/2.2.5/retakes-hud.smx"
 csgo:
   scale: 1
   start_on_create: true
