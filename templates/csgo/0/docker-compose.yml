@@ -19,7 +19,6 @@ services:
       - database
     image: kmallea/csgo
     restart: unless-stopped
-    network_mode: host
     stdin_open: true
     tty: true
     volumes:
