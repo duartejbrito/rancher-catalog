@@ -1,13 +1,29 @@
 version: '2'
 services:
+  database:
+    image: mysql
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: ${DBNAME}
+      MYSQL_USER: ${DBUSER}
+      MYSQL_PASSWORD: ${DBPASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DBROOTPASSWORD}
+    ports:
+      - ${DBPORT}:3306
+    volumes:
+      - ${VOLUME}/database:/var/lib/mysql
+
   csgo:
+    depends_on:
+      - database
     image: kmallea/csgo
     restart: unless-stopped
     network_mode: host
     stdin_open: true
     tty: true
     volumes:
-    - ${VOLUME}:/home/steam/csgo:rw
+    - ${VOLUME}/config:/home/steam/csgo:rw
     ports:
     - ${PORT}:27015
     - ${PORTTV}:27020
@@ -32,4 +48,3 @@ services:
     - LAN=${LAN}
     - RETAKES=${RETAKES}
     - INSTALL_PLUGINS=${INSTALL_PLUGINS}
-    

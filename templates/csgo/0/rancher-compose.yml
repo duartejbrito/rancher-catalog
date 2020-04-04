@@ -9,7 +9,37 @@
       label: "Path for Config"
       type: "string"
       required: true
-      default: "/host/dockers/csgo/config"
+      default: "/host/dockers/csgo"
+    - variable: DBNAME
+      description: ""
+      label: "DBNAME"
+      type: "string"
+      required: true
+      default: "csgo_db"
+    - variable: DBUSER
+      description: ""
+      label: "DBUSER"
+      type: "string"
+      required: true
+      default: "csgo_user"
+    - variable: DBPASSWORD
+      description: ""
+      label: "DBPASSWORD"
+      type: "string"
+      required: true
+      default: "changeme"
+    - variable: DBROOTPASSWORD
+      description: ""
+      label: "DBROOTPASSWORD"
+      type: "string"
+      required: true
+      default: "changeme"
+    - variable: DBPORT
+      description: ""
+      label: "DBPORT"
+      type: "int"
+      required: true
+      default: "3306"
     - variable: PORT
       description: ""
       label: "Port for server"
@@ -119,11 +149,11 @@
       required: true
       default: 0
     - variable: INSTALL_PLUGINS
-      description: ""
+      description: "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6478-linux.tar.gz https://github.com/splewis/csgo-pug-setup/releases/download/2.0.5/pugsetup_2.0.5.zip https://github.com/splewis/csgo-retakes/releases/download/v0.3.4/retakes_0.3.4.zip https://github.com/b3none/retakes-instadefuse/releases/download/1.4.0/retakes-instadefuse.smx https://github.com/b3none/retakes-autoplant/releases/download/2.3.0/retakes_autoplant.smx https://github.com/b3none/retakes-hud/releases/download/2.2.5/retakes-hud.smx"
       label: "INSTALL_PLUGINS"
       type: "string"
       required: true
-      default: "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6478-linux.tar.gz https://github.com/splewis/csgo-pug-setup/releases/download/2.0.5/pugsetup_2.0.5.zip https://github.com/splewis/csgo-retakes/releases/download/v0.3.4/retakes_0.3.4.zip https://github.com/b3none/retakes-instadefuse/releases/download/1.4.0/retakes-instadefuse.smx https://github.com/b3none/retakes-autoplant/releases/download/2.3.0/retakes_autoplant.smx https://github.com/b3none/retakes-hud/releases/download/2.2.5/retakes-hud.smx"
+      default: "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6478-linux.tar.gz"
 csgo:
   scale: 1
   start_on_create: true
