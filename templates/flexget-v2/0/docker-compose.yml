@@ -1,0 +1,18 @@
+version: '2'
+services:
+  flexget-v2:
+    image: cpoppema/docker-flexget
+    restart: unless-stopped
+    environment:
+    - PUID=${PUID}
+    - PGID=${PGID}
+    - WEB_PASSWD=${password}
+    - TORRENT_PLUGIN=${torrentPlugin}
+    - TZ=${TZ}
+    - FLEXGET_LOG_LEVEL=${logLevel}
+    volumes:
+    - ${volumeFlexget}:/config
+    - ${volumeMedia}:/downloads
+    ports:
+    - ${port}:5050
+    network_mode: host

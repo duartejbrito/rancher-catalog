@@ -1,0 +1,64 @@
+.catalog:
+  name: "Flexget v2"
+  version: "v1"
+  description: "Flexget v2"
+  uuid: flexget-v2-1
+  questions:
+    - variable: PUID
+      description: ""
+      label: "PUID"
+      type: "int"
+      required: true
+      default: "1000"
+    - variable: PGID
+      description: ""
+      label: "PGID"
+      type: "int"
+      required: true
+      default: "1000"
+    - variable: password
+      description: ""
+      label: "Password"
+      type: "string"
+      required: true
+      default: "changeme"
+    - variable: torrentPlugin
+      description: "transmission or deluge"
+      label: "Torrent Plugin"
+      type: "string"
+      required: true
+      default: "transmission"
+    - variable: TZ
+      description: ""
+      label: "TZ"
+      type: "string"
+      required: true
+      default: "Europe/London"
+    - variable: logLevel
+      description: "critical, error, warning, info, verbose, debug, trace"
+      label: "Log Level"
+      type: "string"
+      required: true
+      default: "warning"
+    - variable: volumeFlexget
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/FlexgetV2/config"
+    - variable: volumeMedia
+      description: "Adicional media path"
+      label: "Path for Media"
+      type: "string"
+      required: true
+      default: "/host/media"
+    - variable: port
+      description: ""
+      label: "Port"
+      type: "int"
+      required: true
+      default: "5050"
+
+flexget-v2:
+  scale: 1
+  start_on_create: true
