@@ -1,0 +1,9 @@
+.catalog:
+  name: "djabProxy"
+  version: "v1"
+  description: "djabProxy"
+  uuid: proxy-1
+
+proxy:
+  scale: 1
+  start_on_create: true

@@ -1,0 +1,8 @@
+version: '2'
+services:
+  proxy:
+    image: syter/proxy
+    ports:
+      - 3001:80
+    restart: unless-stopped
+    network_mode: default
