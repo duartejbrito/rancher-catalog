@@ -9,13 +9,13 @@
       label: "PUID"
       type: "int"
       required: true
-      default: "1000"
+      default: "1001"
     - variable: PGID
       description: ""
       label: "PGID"
       type: "int"
       required: true
-      default: "1000"
+      default: "1001"
     - variable: password
       description: ""
       label: "Password"
