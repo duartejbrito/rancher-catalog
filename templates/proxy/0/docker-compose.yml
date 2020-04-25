@@ -4,5 +4,10 @@ services:
     image: syter/proxy
     ports:
       - 3001:80
+    environment:
+      - Yts__BaseUrl=${YTSBASEURL}
+      - Yts__ByPass=${YTSBYPASS}
+      - EzTv__BaseUrl=${EZTVBASEURL}
+      - EzTv__ByPass=${EZTVBYPASS}
     restart: unless-stopped
     network_mode: default

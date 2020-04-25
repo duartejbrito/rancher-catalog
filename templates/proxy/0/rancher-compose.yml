@@ -3,6 +3,31 @@
   version: "v1"
   description: "djabProxy"
   uuid: proxy-1
+  questions:
+    - variable: YTSBASEURL
+      description: ""
+      label: "Yts baseUrl"
+      type: "string"
+      required: true
+      default: "https://yts.mx/"
+    - variable: YTSBYPASS
+      description: ""
+      label: "Yts bypass"
+      type: "boolean"
+      required: true
+      default: false
+    - variable: EZTVBASEURL
+      description: ""
+      label: "EzTv baseUrl"
+      type: "string"
+      required: true
+      default: "https://eztv.io/"
+    - variable: EZTVBYPASS
+      description: ""
+      label: "EzTv bypass"
+      type: "boolean"
+      required: true
+      default: false
 
 proxy:
   scale: 1
