@@ -19,6 +19,13 @@
       required: true
       default: "/host/dockers/PlexMediaServer/transcode"
 
+    - variable: volumeTmp
+      description: "The path where you would like Plex Media Server to store its tmp temp files"
+      label: "Path for tmp"
+      type: "string"
+      required: true
+      default: "/host/dockers/PlexMediaServer/tmp"
+
     - variable: volumeData
       description: "This is provided as examples for providing media into the container. The exact structure of how the media is organized and presented inside the container is a matter of user preference. You can use as many or as few of these parameters as required to provide your media to the container."
       label: "Path for Data"

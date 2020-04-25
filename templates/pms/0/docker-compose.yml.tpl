@@ -8,6 +8,7 @@ services:
     - ${volumeData}:/data:rw
     - ${volumeMedia}:/media:rw
     - ${volumeTranscode}:/transcode:rw
+    - ${volumeTmp}:/tmp:rw
 {{- if eq .Values.networkMode "host"}}
     network_mode: host
 {{- end}}
