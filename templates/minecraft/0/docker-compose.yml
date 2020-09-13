@@ -20,10 +20,3 @@ services:
       DIFFICULTY: ${DIFFICULTY}
       OPS: ${OPS}
     network_mode: host
-  rcon:
-    image: itzg/rcon
-    ports:
-      - "4326:4326"
-      - "4327:4327"
-    volumes:
-      - ${volumeRcon}:/opt/rcon-web-admin/db:rw
