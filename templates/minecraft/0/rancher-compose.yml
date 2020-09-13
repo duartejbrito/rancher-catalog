@@ -34,7 +34,7 @@
       label: "OPS"
       type: "string"
       required: true
-      default: ""
+      default: "SyTeRPT,mamocas"
     - variable: MEMORY
       description: "The values of all three are passed directly to the JVM and support format/units as <size>[g|G|m|M|k|K]."
       label: "MEMORY"
