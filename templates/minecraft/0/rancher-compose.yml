@@ -35,6 +35,12 @@
       type: "string"
       required: true
       default: ""
+    - variable: MEMORY
+      description: "The values of all three are passed directly to the JVM and support format/units as <size>[g|G|m|M|k|K]."
+      label: "MEMORY"
+      type: "string"
+      required: true
+      default: "1G"
 
 minecraft:
   scale: 1

@@ -19,4 +19,5 @@ services:
       SERVER_NAME: ${SERVER_NAME}
       DIFFICULTY: ${DIFFICULTY}
       OPS: ${OPS}
+      MEMORY: ${MEMORY}
     network_mode: host
