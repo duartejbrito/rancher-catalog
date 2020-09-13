@@ -11,4 +11,16 @@ services:
     - ${volumeData}:/data:rw
     environment:
       EULA: "TRUE"
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: ${RCON_PASSWORD}
+      RCON_PORT: 28016
+      REPLACE_ENV_VARIABLES: "TRUE"
+      ENV_VARIABLE_PREFIX: "CFG_"
     network_mode: host
+  rcon:
+    image: itzg/rcon
+    ports:
+      - "4326:4326"
+      - "4327:4327"
+    volumes:
+      - ${volumeData}:/opt/rcon-web-admin/db:rw

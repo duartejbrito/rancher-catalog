@@ -11,6 +11,18 @@
       type: "string"
       required: true
       default: "/host/dockers/Minecraft/data"
+    - variable: volumeData
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/Minecraft/rcon"
+    - variable: RCON_PASSWORD
+      description: ""
+      label: "RCON_PASSWORD"
+      type: "string"
+      required: true
+      default: "TOCHANGE"
 
 minecraft:
   scale: 1
