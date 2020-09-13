@@ -1,0 +1,17 @@
+.catalog:
+  name: "Minecraft"
+  version: "v1"
+  description: "Minecraft"
+  uuid: minecraft-1
+  questions:
+    #VOLUMES
+    - variable: volumeData
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/Minecraft/data"
+
+minecraft:
+  scale: 1
+  start_on_create: true

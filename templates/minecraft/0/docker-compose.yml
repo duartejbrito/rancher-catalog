@@ -1,0 +1,14 @@
+version: '2'
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    ports:
+    - "25565:25565"
+    volumes:
+    - ${volumeData}:/data:rw
+    environment:
+      EULA: "TRUE"
+    network_mode: host

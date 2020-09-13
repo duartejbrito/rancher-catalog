@@ -1,6 +1,6 @@
-name: Flexget
+name: Minecraft
 description: |
-  Flexget
+  Minecraft
 version: v1
-category: Automation Tool
+category: Games
 maintainer: Duarte Brito <sytertzp@gmail.com>
