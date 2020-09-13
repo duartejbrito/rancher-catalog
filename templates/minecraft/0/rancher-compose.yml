@@ -40,7 +40,19 @@
       label: "MEMORY"
       type: "string"
       required: true
+      default: "3G"
+    - variable: INIT_MEMORY
+      description: "The values of all three are passed directly to the JVM and support format/units as <size>[g|G|m|M|k|K]."
+      label: "INIT_MEMORY"
+      type: "string"
+      required: true
       default: "1G"
+    - variable: MAX_MEMORY
+      description: "The values of all three are passed directly to the JVM and support format/units as <size>[g|G|m|M|k|K]."
+      label: "MAX_MEMORY"
+      type: "string"
+      required: true
+      default: "2.5G"
 
 minecraft:
   scale: 1
