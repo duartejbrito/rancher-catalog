@@ -16,6 +16,9 @@ services:
       RCON_PORT: 28016
       REPLACE_ENV_VARIABLES: "TRUE"
       ENV_VARIABLE_PREFIX: "CFG_"
+      SERVER_NAME: ${SERVER_NAME}
+      DIFFICULTY: ${DIFFICULTY}
+      OPS: ${OPS}
     network_mode: host
   rcon:
     image: itzg/rcon

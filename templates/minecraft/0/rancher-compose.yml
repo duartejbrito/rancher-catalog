@@ -23,6 +23,24 @@
       type: "string"
       required: true
       default: "TOCHANGE"
+    - variable: SERVER_NAME
+      description: ""
+      label: "SERVER_NAME"
+      type: "string"
+      required: true
+      default: "LadyStarPT World"
+    - variable: DIFFICULTY
+      description: "Valid values are: peaceful, easy, normal, and hard, and an error message will be output in the logs if it's not one of these values."
+      label: "DIFFICULTY"
+      type: "string"
+      required: true
+      default: "peaceful"
+    - variable: OPS
+      description: ""
+      label: "OPS"
+      type: "string"
+      required: true
+      default: ""
 
 minecraft:
   scale: 1
