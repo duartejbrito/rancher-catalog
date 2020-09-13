@@ -11,7 +11,7 @@
       type: "string"
       required: true
       default: "/host/dockers/Minecraft/data"
-    - variable: volumeData
+    - variable: volumeRcon
       description: ""
       label: "Path for Config"
       type: "string"

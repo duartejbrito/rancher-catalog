@@ -26,4 +26,4 @@ services:
       - "4326:4326"
       - "4327:4327"
     volumes:
-      - ${volumeData}:/opt/rcon-web-admin/db:rw
+      - ${volumeRcon}:/opt/rcon-web-admin/db:rw
