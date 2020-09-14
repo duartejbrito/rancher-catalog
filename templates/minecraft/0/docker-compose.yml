@@ -11,6 +11,8 @@ services:
     - ${volumeData}:/data:rw
     environment:
       EULA: "TRUE"
+      TZ: Europe/London
+      TYPE: TUINITY
       SERVER_NAME: ${SERVER_NAME}
       DIFFICULTY: ${DIFFICULTY}
       OPS: ${OPS}
