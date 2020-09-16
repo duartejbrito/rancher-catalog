@@ -13,10 +13,16 @@
       default: "25565"
     - variable: volumeData
       description: ""
-      label: "Path for Config"
+      label: "Path for Data"
       type: "string"
       required: true
       default: "/host/dockers/Minecraft/data"
+    - variable: volumeModpacks
+      description: ""
+      label: "Path for Modpacks"
+      type: "string"
+      required: true
+      default: "/host/dockers/Minecraft/modpacks"
     - variable: VERSION
       description: "LATEST|SNAPSHOT|1.7.9"
       label: "VERSION"
