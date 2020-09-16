@@ -62,15 +62,15 @@
     - variable: USE_MODPACK_START_SCRIPT
       description: "Some modpacks have buggy or overly complex start scripts. You can avoid using the bundled start script and use this image's standard server-starting logic by adding -e USE_MODPACK_START_SCRIPT=false."
       label: "USE_MODPACK_START_SCRIPT"
-      type: "string"
+      type: "boolean"
       required: false
-      default: "true"
+      default: true
     - variable: FTB_LEGACYJAVAFIXER
       description: "Fixing 'unable to launch forgemodloader' -e FTB_LEGACYJAVAFIXER=true"
       label: "FTB_LEGACYJAVAFIXER"
-      type: "string"
+      type: "boolean"
       required: false
-      default: "false"
+      default: false
     # - variable: RCON_PASSWORD
     #   description: ""
     #   label: "RCON_PASSWORD"
