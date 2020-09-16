@@ -53,12 +53,12 @@
       type: "string"
       required: true
       default: "SyTeRPT,mamocas"
-    # - variable: MEMORY
-    #   description: "The values of all three are passed directly to the JVM and support format/units as <size>[g|G|m|M|k|K]."
-    #   label: "MEMORY"
-    #   type: "string"
-    #   required: true
-    #   default: "1G"
+    - variable: MEMORY
+      description: "The values of all three are passed directly to the JVM and support format/units as <size>[g|G|m|M|k|K]."
+      label: "MEMORY"
+      type: "string"
+      required: true
+      default: "1G"
     - variable: CF_SERVER_MOD
       description: "You need to specify a modpack to run, using the CF_SERVER_MOD environment variable. A CurseForge server modpack is available together with its respective client modpack at https://www.curseforge.com/minecraft/modpacks . (Valhelsia_SERVER-3.0.17.zip)"
       label: "CF_SERVER_MOD"
