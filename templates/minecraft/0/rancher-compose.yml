@@ -17,12 +17,18 @@
       type: "string"
       required: true
       default: "/host/dockers/Minecraft/data"
-    # - variable: RCON_PASSWORD
-    #   description: ""
-    #   label: "RCON_PASSWORD"
-    #   type: "string"
-    #   required: true
-    #   default: "TOCHANGE"
+    - variable: VERSION
+      description: "LATEST|SNAPSHOT|1.7.9"
+      label: "VERSION"
+      type: "string"
+      required: true
+      default: "LATEST"
+    - variable: TYPE
+      description: "FORGE|BUKKIT|BUKKIT|PAPER|TUINITY|MAGMA|MOHIST|CATSERVER|FTBA|CURSEFORGE|SPONGEVANILLA|FABRIC|CUSTOM"
+      label: "TYPE"
+      type: "string"
+      required: false
+      default: ""
     - variable: SERVER_NAME
       description: ""
       label: "SERVER_NAME"
@@ -41,12 +47,36 @@
       type: "string"
       required: true
       default: "SyTeRPT,mamocas"
-    # - variable: MEMORY
-    #   description: "The values of all three are passed directly to the JVM and support format/units as <size>[g|G|m|M|k|K]."
-    #   label: "MEMORY"
+    - variable: MEMORY
+      description: "The values of all three are passed directly to the JVM and support format/units as <size>[g|G|m|M|k|K]."
+      label: "MEMORY"
+      type: "string"
+      required: true
+      default: "1G"
+    - variable: CF_SERVER_MOD
+      description: "You need to specify a modpack to run, using the CF_SERVER_MOD environment variable. A CurseForge server modpack is available together with its respective client modpack at https://www.curseforge.com/minecraft/modpacks . (Valhelsia_SERVER-3.0.17.zip)"
+      label: "CF_SERVER_MOD"
+      type: "string"
+      required: false
+      default: ""
+    - variable: USE_MODPACK_START_SCRIPT
+      description: "Some modpacks have buggy or overly complex start scripts. You can avoid using the bundled start script and use this image's standard server-starting logic by adding -e USE_MODPACK_START_SCRIPT=false."
+      label: "USE_MODPACK_START_SCRIPT"
+      type: "string"
+      required: false
+      default: "true"
+    - variable: FTB_LEGACYJAVAFIXER
+      description: "Fixing 'unable to launch forgemodloader' -e FTB_LEGACYJAVAFIXER=true"
+      label: "FTB_LEGACYJAVAFIXER"
+      type: "string"
+      required: false
+      default: "false"
+    # - variable: RCON_PASSWORD
+    #   description: ""
+    #   label: "RCON_PASSWORD"
     #   type: "string"
     #   required: true
-    #   default: "3G"
+    #   default: "TOCHANGE"
     # - variable: INIT_MEMORY
     #   description: "The values of all three are passed directly to the JVM and support format/units as <size>[g|G|m|M|k|K]."
     #   label: "INIT_MEMORY"

@@ -12,10 +12,15 @@ services:
     environment:
       EULA: "TRUE"
       TZ: Europe/London
-      TYPE: TUINITY
+      VERSION: ${VERSION}
+      TYPE: ${TYPE}
       SERVER_NAME: ${SERVER_NAME}
       DIFFICULTY: ${DIFFICULTY}
       OPS: ${OPS}
+      MEMORY: ${MEMORY}
+      CF_SERVER_MOD: ${CF_SERVER_MOD}
+      USE_MODPACK_START_SCRIPT: ${USE_MODPACK_START_SCRIPT}
+      FTB_LEGACYJAVAFIXER: ${FTB_LEGACYJAVAFIXER}
       #ENABLE_RCON: "true"
       #RCON_PASSWORD: ${RCON_PASSWORD}
       #RCON_PORT: 28016
