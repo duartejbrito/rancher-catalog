@@ -1,0 +1,15 @@
+version: '2'
+services:
+  fivem:
+    image: spritsail/fivem
+    restart: unless-stopped
+    environment:
+    - LICENCE_KEY=${LICENCE_KEY}
+    volumes:
+    - ${volumeConfig}:/config
+    ports:
+    - ${port}:30120
+    - ${port}:30120/udp
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    network_mode: host

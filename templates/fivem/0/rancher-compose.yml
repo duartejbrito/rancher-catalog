@@ -1,0 +1,28 @@
+.catalog:
+  name: "FiveM"
+  version: "v1"
+  description: "FiveM"
+  uuid: fivem-1
+  questions:
+    - variable: LICENCE_KEY
+      description: ""
+      label: "LICENCE_KEY"
+      type: "int"
+      required: true
+      default: "asdsadsadsad"
+    - variable: volumeConfig
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/FiveM/config"
+    - variable: port
+      description: ""
+      label: "Port"
+      type: "int"
+      required: true
+      default: "30120"
+
+fivem:
+  scale: 1
+  start_on_create: true
