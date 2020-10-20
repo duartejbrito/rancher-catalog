@@ -7,7 +7,7 @@
     - variable: LICENCE_KEY
       description: ""
       label: "LICENCE_KEY"
-      type: "int"
+      type: "string"
       required: true
       default: "asdsadsadsad"
     - variable: volumeConfig
