@@ -1,0 +1,79 @@
+.catalog:
+  name: "Nginx Proxy Manager"
+  version: "v1"
+  description: "Nginx Proxy Manager"
+  uuid: nginxProxyManager-1
+  questions:
+    - variable: volumeConfig
+      description: ""
+      label: "Path for Config"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxProxyManager/config.json"
+    - variable: volumeData
+      description: ""
+      label: "Path for Data"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxProxyManager/data"
+    - variable: volumeLetsencrypt
+      description: ""
+      label: "Path for Letsencrypt"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxProxyManager/letsencrypt"
+    - variable: portHttp
+      description: ""
+      label: "Port"
+      type: "int"
+      required: true
+      default: "80"
+    - variable: portAdmin
+      description: ""
+      label: "Port"
+      type: "int"
+      required: true
+      default: "81"
+    - variable: portHttps
+      description: ""
+      label: "Port"
+      type: "int"
+      required: true
+      default: "443"
+    - variable: mySqlRootPassword
+      description: ""
+      label: "MySql Root Password"
+      type: "string"
+      required: true
+      default: "npm"
+    - variable: mySqlDatabase
+      description: ""
+      label: "MySql Database"
+      type: "string"
+      required: true
+      default: "npm"
+    - variable: mySqlUser
+      description: ""
+      label: "MySql User"
+      type: "string"
+      required: true
+      default: "npm"
+    - variable: mySqlPassword
+      description: ""
+      label: "MySql Password"
+      type: "string"
+      required: true
+      default: "npm"
+    - variable: volumeMySql
+      description: ""
+      label: "Path for MySql"
+      type: "string"
+      required: true
+      default: "/host/dockers/NginxProxyManager/mysql"
+
+app:
+  scale: 1
+  start_on_create: true
+db:
+  scale: 1
+  start_on_create: true

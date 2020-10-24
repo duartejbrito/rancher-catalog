@@ -1,0 +1,6 @@
+name: Nginx Proxy Manager
+description: |
+  Nginx Proxy Manager
+version: v1
+category: Software
+maintainer: Duarte Brito <sytertzp@gmail.com>
