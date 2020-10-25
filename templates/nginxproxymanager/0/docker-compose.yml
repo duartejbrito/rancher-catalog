@@ -3,6 +3,7 @@ services:
   app:
     image: jc21/nginx-proxy-manager:latest
     restart: unless-stopped
+    network_mode: host
     volumes:
       - ${volumeConfig}:/app/config/production.json
       - ${volumeData}:/data
@@ -11,9 +12,10 @@ services:
       - ${portHttp}:80
       - ${portAdmin}:81
       - ${portHttps}:443
-    network_mode: host
   db:
     image: 'mariadb'
+    restart: unless-stopped
+    network_mode: host
     environment:
       MYSQL_ROOT_PASSWORD: '${mySqlRootPassword}'
       MYSQL_DATABASE: '${mySqlDatabase}'
@@ -22,4 +24,3 @@ services:
     volumes:
       - ${volumeMySql}:/var/lib/mysql
     command: '--innodb-flush-method=fsync'
-    network_mode: host
