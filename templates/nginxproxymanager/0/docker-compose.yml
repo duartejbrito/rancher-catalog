@@ -21,3 +21,4 @@ services:
       MYSQL_PASSWORD: '${mySqlPassword}'
     volumes:
       - ${volumeMySql}:/var/lib/mysql
+    command: 'mysqld --innodb-flush-method=fsync'
