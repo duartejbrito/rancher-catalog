@@ -11,6 +11,7 @@ services:
       - ${portHttp}:80
       - ${portAdmin}:81
       - ${portHttps}:443
+    network_mode: host
   db:
     image: 'mariadb'
     environment:
@@ -21,3 +22,4 @@ services:
     volumes:
       - ${volumeMySql}:/var/lib/mysql
     command: '--innodb-flush-method=fsync'
+    network_mode: host
