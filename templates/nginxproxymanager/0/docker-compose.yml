@@ -3,7 +3,6 @@ services:
   app:
     image: jc21/nginx-proxy-manager:latest
     restart: unless-stopped
-    network_mode: host
     volumes:
       - ${volumeConfig}:/app/config/production.json
       - ${volumeData}:/data
@@ -15,7 +14,6 @@ services:
   db:
     image: 'mariadb'
     restart: unless-stopped
-    network_mode: host
     environment:
       MYSQL_ROOT_PASSWORD: '${mySqlRootPassword}'
       MYSQL_DATABASE: '${mySqlDatabase}'
