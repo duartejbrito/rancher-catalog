@@ -13,7 +13,7 @@ services:
       - ${portHttps}:443
     network_mode: host
   db:
-    image: 'jc21/mariadb-aria:10.4'
+    image: 'mariadb'
     environment:
       MYSQL_ROOT_PASSWORD: '${mySqlRootPassword}'
       MYSQL_DATABASE: '${mySqlDatabase}'
@@ -21,4 +21,3 @@ services:
       MYSQL_PASSWORD: '${mySqlPassword}'
     volumes:
       - ${volumeMySql}:/var/lib/mysql
-    command: '--innodb-flush-method=fsync'
